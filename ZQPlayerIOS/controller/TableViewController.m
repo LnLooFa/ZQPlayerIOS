@@ -22,13 +22,15 @@ NSMutableArray *data;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
      data = [[NSMutableArray alloc]init];
-    for (int i = 0; i < 10; i++) {
-        NSString *title = [[NSString alloc] initWithFormat:@"title %d", i];
-        [data addObject:[[ActionItemBean alloc]initWith:title]];
-    }
+    NSString *title = [[NSString alloc] initWithFormat:@"SplashViewController"];
+    [data addObject:[[ActionItemBean alloc]initWith:title]];
+    
+    [data addObject:[[ActionItemBean alloc]initWith:@"NSUserDefaultsViewController"]];
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
+    _tableView.rowHeight = UITableViewAutomaticDimension;
     _tableView.dataSource = _tableViewAdapter;
+    _tableView.delegate = _tableViewAdapter;
 }
 
 

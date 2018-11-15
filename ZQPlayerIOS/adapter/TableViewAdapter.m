@@ -36,12 +36,21 @@
     }
     UIImageView *pic = (UIImageView *)[cell viewWithTag:1];
     UILabel *nameLab = (UILabel *)[cell viewWithTag:2];
-    UILabel *ageLab = (UILabel *)[cell viewWithTag:3];
-    
-    [nameLab setText:@"张三6"];
-    [ageLab setText:@"16"];
+    ActionItemBean* bean = _source[indexPath.row];
+    [nameLab setText:bean.title];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ActionItemBean* bean = _source[indexPath.row];
+    Class objClass = NSClassFromString(bean.title);
+    UIViewController *detailClass = [[objClass alloc] init];
+//    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:detailClass];
+//    [self.controller presentViewController:detailClass animated:true completion:NULL];
+    detailClass.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.controller.navigationController pushViewController:detailClass animated:YES];
+
 }
 
 

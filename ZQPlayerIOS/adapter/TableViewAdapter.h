@@ -11,7 +11,7 @@
 #import "TableViewController.h"
 #import "ActionItemBean.h"
 
-@interface TableViewAdapter : NSObject <UITableViewDataSource>
+@interface TableViewAdapter : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) NSMutableArray* source;
 @property (weak, nonatomic) TableViewController* controller;
