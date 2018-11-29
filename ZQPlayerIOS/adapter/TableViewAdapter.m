@@ -44,7 +44,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ActionItemBean* bean = _source[indexPath.row];
-    Class objClass = NSClassFromString(bean.title);
+    Class objClass = NSClassFromString(bean.target);
     UIViewController *detailClass = [[objClass alloc] init];
 //    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:detailClass];
 //    [self.controller presentViewController:detailClass animated:true completion:NULL];

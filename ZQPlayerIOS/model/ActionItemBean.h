@@ -10,7 +10,7 @@
 
 @interface ActionItemBean : NSObject
 @property NSString* title;
-
-- (id) initWith:(NSString*) title;
+@property NSString* target;
+- (id) initWith:(NSString*) title target:(NSString*) target;
 
 @end

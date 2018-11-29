@@ -11,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="actionItemLayout" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="22" id="1s8-TY-wna">
-            <rect key="frame" x="0.0" y="0.0" width="379" height="22"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="actionItemLayout" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="20" id="1s8-TY-wna">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="20"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1s8-TY-wna" id="lhq-hh-Ace">
-                <rect key="frame" x="0.0" y="0.0" width="379" height="21.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1s8-TY-wna" id="lhq-hh-Ace">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="19.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7R-p6-Sef">
+                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7R-p6-Sef">
                         <rect key="frame" x="0.0" y="0.0" width="379" height="20.5"/>
                         <color key="backgroundColor" red="0.69513290052551358" green="1" blue="0.35742154519174474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -36,7 +36,7 @@
                     <constraint firstAttribute="trailing" secondItem="P7R-p6-Sef" secondAttribute="trailing" id="gxe-WE-Ckz"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="277.5" y="-865"/>
+            <point key="canvasLocation" x="277.5" y="-866"/>
         </tableViewCell>
     </objects>
 </document>

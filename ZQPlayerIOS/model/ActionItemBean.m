@@ -10,8 +10,9 @@
 
 @implementation ActionItemBean
 
-- (id)initWith:(NSString *)title{
+- (id)initWith:(NSString *)title target:(NSString*) target{
     _title = title;
+    _target = target;
     return self;
 }
 
