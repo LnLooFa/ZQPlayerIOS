@@ -11,12 +11,18 @@
 		1B09AE9B21AD96FB0017D6F6 /* RedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */; };
 		1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */; };
 		1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */; };
+		1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B09B23A21B3F166000C7514 /* AnimationViewController.m */; };
+		1B09B23D21B3F166000C7514 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B09B23B21B3F166000C7514 /* AnimationViewController.xib */; };
+		1B0A023B21B01BBE000F2553 /* MyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */; };
+		1B0A023C21B01BBE000F2553 /* MyTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */; };
 		1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A7E75217C0C15001FE450 /* TableViewAdapter.m */; };
 		1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A7E78217C188A001FE450 /* ActionItemBean.m */; };
 		1B0A7E7D217C2809001FE450 /* ActionItemLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A7E7C217C2809001FE450 /* ActionItemLayout.xib */; };
 		1B0DE7AE21932F27006221B7 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DE7AD21932F27006221B7 /* People.m */; };
 		1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */; };
 		1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */; };
+		1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B24C4DD21C7F34D00DF541C /* LocationViewController.m */; };
+		1B24C4E021C7F34D00DF541C /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */; };
 		1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B27AF5421AAF2E300CB0033 /* ImageViewController.m */; };
 		1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */; };
 		1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */; };
@@ -57,6 +63,12 @@
 		1B09AE9C21AD973F0017D6F6 /* GreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GreenViewController.h; sourceTree = "<group>"; };
 		1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreenViewController.m; sourceTree = "<group>"; };
 		1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
+		1B09B23921B3F166000C7514 /* AnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		1B09B23A21B3F166000C7514 /* AnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		1B09B23B21B3F166000C7514 /* AnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
+		1B0A023821B01BBE000F2553 /* MyTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTabBarViewController.h; sourceTree = "<group>"; };
+		1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTabBarViewController.m; sourceTree = "<group>"; };
+		1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTabBarViewController.xib; sourceTree = "<group>"; };
 		1B0A7E74217C0C15001FE450 /* TableViewAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewAdapter.h; sourceTree = "<group>"; };
 		1B0A7E75217C0C15001FE450 /* TableViewAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewAdapter.m; sourceTree = "<group>"; };
 		1B0A7E77217C188A001FE450 /* ActionItemBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionItemBean.h; sourceTree = "<group>"; };
@@ -67,6 +79,9 @@
 		1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		1B24C4DC21C7F34D00DF541C /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		1B24C4DD21C7F34D00DF541C /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		1B27AF5321AAF2E300CB0033 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		1B27AF5421AAF2E300CB0033 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
@@ -139,37 +154,39 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		1B18FBD3217B6FE5003A4E04 /* layout */ = {
-			isa = PBXGroup;
-			children = (
-				1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */,
-				1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */,
-				1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */,
-				1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */,
-				1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */,
-				1BFD5F062182101700C1829D /* SplashViewController.xib */,
-				1B0A7E7C217C2809001FE450 /* ActionItemLayout.xib */,
-			);
-			path = layout;
-			sourceTree = "<group>";
-		};
 		1B18FBD4217B7006003A4E04 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				1B44D1CC2163B1EF00C0F563 /* TableViewController.h */,
-				1B44D1CD2163B1EF00C0F563 /* TableViewController.m */,
-				1BFD5F042182101700C1829D /* SplashViewController.h */,
-				1BFD5F052182101700C1829D /* SplashViewController.m */,
-				1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */,
-				1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */,
-				1B27AF5321AAF2E300CB0033 /* ImageViewController.h */,
-				1B27AF5421AAF2E300CB0033 /* ImageViewController.m */,
-				1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */,
-				1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */,
-				1B09AE9721AD96FB0017D6F6 /* RedViewController.h */,
-				1B09AE9821AD96FB0017D6F6 /* RedViewController.m */,
+				1B0A7E7C217C2809001FE450 /* ActionItemLayout.xib */,
+				1B09B23921B3F166000C7514 /* AnimationViewController.h */,
+				1B09B23A21B3F166000C7514 /* AnimationViewController.m */,
+				1B09B23B21B3F166000C7514 /* AnimationViewController.xib */,
 				1B09AE9C21AD973F0017D6F6 /* GreenViewController.h */,
 				1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */,
+				1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */,
+				1B27AF5321AAF2E300CB0033 /* ImageViewController.h */,
+				1B27AF5421AAF2E300CB0033 /* ImageViewController.m */,
+				1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */,
+				1B0A023821B01BBE000F2553 /* MyTabBarViewController.h */,
+				1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */,
+				1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */,
+				1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */,
+				1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */,
+				1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */,
+				1B09AE9721AD96FB0017D6F6 /* RedViewController.h */,
+				1B09AE9821AD96FB0017D6F6 /* RedViewController.m */,
+				1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */,
+				1BFD5F042182101700C1829D /* SplashViewController.h */,
+				1BFD5F052182101700C1829D /* SplashViewController.m */,
+				1BFD5F062182101700C1829D /* SplashViewController.xib */,
+				1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */,
+				1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */,
+				1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */,
+				1B44D1CC2163B1EF00C0F563 /* TableViewController.h */,
+				1B44D1CD2163B1EF00C0F563 /* TableViewController.m */,
+				1B24C4DC21C7F34D00DF541C /* LocationViewController.h */,
+				1B24C4DD21C7F34D00DF541C /* LocationViewController.m */,
+				1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -177,10 +194,10 @@
 		1B44D1BD2163B1EF00C0F563 = {
 			isa = PBXGroup;
 			children = (
+				1B44D1C72163B1EF00C0F563 /* Products */,
 				1B44D1C82163B1EF00C0F563 /* ZQPlayerIOS */,
 				1B44D1E12163B1F000C0F563 /* ZQPlayerIOSTests */,
 				1B44D1EC2163B1F000C0F563 /* ZQPlayerIOSUITests */,
-				1B44D1C72163B1EF00C0F563 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				1B18FBD4217B7006003A4E04 /* controller */,
-				1B18FBD3217B6FE5003A4E04 /* layout */,
 				1B18FBD2217B6FD5003A4E04 /* model */,
 				1B18FBD1217B6FC2003A4E04 /* adapter */,
 				1B44D1C92163B1EF00C0F563 /* AppDelegate.h */,
@@ -336,7 +352,10 @@
 				1B09AE9B21AD96FB0017D6F6 /* RedViewController.xib in Resources */,
 				1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */,
 				1B0A7E7D217C2809001FE450 /* ActionItemLayout.xib in Resources */,
+				1B24C4E021C7F34D00DF541C /* LocationViewController.xib in Resources */,
+				1B09B23D21B3F166000C7514 /* AnimationViewController.xib in Resources */,
 				1B44D1D62163B1F000C0F563 /* LaunchScreen.storyboard in Resources */,
+				1B0A023C21B01BBE000F2553 /* MyTabBarViewController.xib in Resources */,
 				1B44D1D32163B1F000C0F563 /* Assets.xcassets in Resources */,
 				1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */,
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
@@ -367,14 +386,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0A023B21B01BBE000F2553 /* MyTabBarViewController.m in Sources */,
 				1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */,
 				1B0DE7AE21932F27006221B7 /* People.m in Sources */,
 				1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */,
+				1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */,
 				1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */,
 				1B44D1D92163B1F000C0F563 /* main.m in Sources */,
 				1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */,
 				1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */,
 				1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */,
+				1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */,
 				1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
 				1B09AE9A21AD96FB0017D6F6 /* RedViewController.m in Sources */,

@@ -27,6 +27,9 @@ NSMutableArray *data;
     [data addObject:[[ActionItemBean alloc]initWith:@"NSUserDefaults数据缓存" target:@"NSUserDefaultsViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"Image 拉伸" target:@"ImageViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"TabBar 实现 tabBarViewController" target:@"TabBarViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"UITabBarViewController 实践" target:@"MyTabBarViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"动画 实践" target:@"AnimationViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"定位" target:@"LocationViewController"]];
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
     _tableView.rowHeight = UITableViewAutomaticDimension;
