@@ -41,6 +41,9 @@
 		1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */; };
 		1BFD5F072182101700C1829D /* SplashDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD5F052182101700C1829D /* SplashDemoViewController.m */; };
 		1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD5F062182101700C1829D /* SplashDemoViewController.xib */; };
+		91A9CFDC63ED1D10960FD376 /* libPods-ZQPlayerIOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2B9A9AE51F366F381AAC0C /* libPods-ZQPlayerIOSUITests.a */; };
+		C057A39F7915932774CEC9F2 /* libPods-ZQPlayerIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D797F932B1AEA634BE7B3DC /* libPods-ZQPlayerIOS.a */; };
+		EA723DF9A979503F6A4A6A6C /* libPods-ZQPlayerIOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD78077712C6910CFD09F98 /* libPods-ZQPlayerIOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CD78077712C6910CFD09F98 /* libPods-ZQPlayerIOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZQPlayerIOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B09AE9721AD96FB0017D6F6 /* RedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedViewController.h; sourceTree = "<group>"; };
 		1B09AE9821AD96FB0017D6F6 /* RedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedViewController.m; sourceTree = "<group>"; };
 		1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedViewController.xib; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 		1BFD5F042182101700C1829D /* SplashDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashDemoViewController.h; sourceTree = "<group>"; };
 		1BFD5F052182101700C1829D /* SplashDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashDemoViewController.m; sourceTree = "<group>"; };
 		1BFD5F062182101700C1829D /* SplashDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashDemoViewController.xib; sourceTree = "<group>"; };
+		7D797F932B1AEA634BE7B3DC /* libPods-ZQPlayerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZQPlayerIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		996855EB38B458C9E4249C9F /* Pods-ZQPlayerIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQPlayerIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQPlayerIOS/Pods-ZQPlayerIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9E2B9A9AE51F366F381AAC0C /* libPods-ZQPlayerIOSUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZQPlayerIOSUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C081EFB8B440236102C06190 /* Pods-ZQPlayerIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQPlayerIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQPlayerIOSUITests/Pods-ZQPlayerIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAC509ABB23473184C32E02C /* Pods-ZQPlayerIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQPlayerIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQPlayerIOSTests/Pods-ZQPlayerIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEA1866B31BFF8204B20EB33 /* Pods-ZQPlayerIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQPlayerIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQPlayerIOS/Pods-ZQPlayerIOS.release.xcconfig"; sourceTree = "<group>"; };
+		CF865C5BC4C042A9473D768C /* Pods-ZQPlayerIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQPlayerIOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQPlayerIOSUITests/Pods-ZQPlayerIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EDF6C90A213FA82069AEC8DB /* Pods-ZQPlayerIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQPlayerIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQPlayerIOSTests/Pods-ZQPlayerIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C057A39F7915932774CEC9F2 /* libPods-ZQPlayerIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA723DF9A979503F6A4A6A6C /* libPods-ZQPlayerIOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A9CFDC63ED1D10960FD376 /* libPods-ZQPlayerIOSUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +197,8 @@
 				1B44D1C82163B1EF00C0F563 /* ZQPlayerIOS */,
 				1B44D1E12163B1F000C0F563 /* ZQPlayerIOSTests */,
 				1B44D1EC2163B1F000C0F563 /* ZQPlayerIOSUITests */,
+				DD83279908D2584317F1F3A8 /* Pods */,
+				9C673373DE42240FE0D8EB43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,6 +297,29 @@
 			path = splash;
 			sourceTree = "<group>";
 		};
+		9C673373DE42240FE0D8EB43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D797F932B1AEA634BE7B3DC /* libPods-ZQPlayerIOS.a */,
+				0CD78077712C6910CFD09F98 /* libPods-ZQPlayerIOSTests.a */,
+				9E2B9A9AE51F366F381AAC0C /* libPods-ZQPlayerIOSUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD83279908D2584317F1F3A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				996855EB38B458C9E4249C9F /* Pods-ZQPlayerIOS.debug.xcconfig */,
+				CEA1866B31BFF8204B20EB33 /* Pods-ZQPlayerIOS.release.xcconfig */,
+				CAC509ABB23473184C32E02C /* Pods-ZQPlayerIOSTests.debug.xcconfig */,
+				EDF6C90A213FA82069AEC8DB /* Pods-ZQPlayerIOSTests.release.xcconfig */,
+				C081EFB8B440236102C06190 /* Pods-ZQPlayerIOSUITests.debug.xcconfig */,
+				CF865C5BC4C042A9473D768C /* Pods-ZQPlayerIOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +327,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B44D1F22163B1F000C0F563 /* Build configuration list for PBXNativeTarget "ZQPlayerIOS" */;
 			buildPhases = (
+				763016B74A9E1CC410040DD6 /* [CP] Check Pods Manifest.lock */,
 				1B44D1C22163B1EF00C0F563 /* Sources */,
 				1B44D1C32163B1EF00C0F563 /* Frameworks */,
 				1B44D1C42163B1EF00C0F563 /* Resources */,
@@ -304,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B44D1F52163B1F000C0F563 /* Build configuration list for PBXNativeTarget "ZQPlayerIOSTests" */;
 			buildPhases = (
+				72490464AC247C11D33DAA12 /* [CP] Check Pods Manifest.lock */,
 				1B44D1DA2163B1F000C0F563 /* Sources */,
 				1B44D1DB2163B1F000C0F563 /* Frameworks */,
 				1B44D1DC2163B1F000C0F563 /* Resources */,
@@ -322,6 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B44D1F82163B1F000C0F563 /* Build configuration list for PBXNativeTarget "ZQPlayerIOSUITests" */;
 			buildPhases = (
+				73B24321BCF793542520381A /* [CP] Check Pods Manifest.lock */,
 				1B44D1E52163B1F000C0F563 /* Sources */,
 				1B44D1E62163B1F000C0F563 /* Frameworks */,
 				1B44D1E72163B1F000C0F563 /* Resources */,
@@ -415,6 +458,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72490464AC247C11D33DAA12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZQPlayerIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73B24321BCF793542520381A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZQPlayerIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		763016B74A9E1CC410040DD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZQPlayerIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B44D1C22163B1EF00C0F563 /* Sources */ = {
@@ -605,6 +705,7 @@
 		};
 		1B44D1F32163B1F000C0F563 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996855EB38B458C9E4249C9F /* Pods-ZQPlayerIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,6 +723,7 @@
 		};
 		1B44D1F42163B1F000C0F563 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA1866B31BFF8204B20EB33 /* Pods-ZQPlayerIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,6 +741,7 @@
 		};
 		1B44D1F62163B1F000C0F563 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAC509ABB23473184C32E02C /* Pods-ZQPlayerIOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -657,6 +760,7 @@
 		};
 		1B44D1F72163B1F000C0F563 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF6C90A213FA82069AEC8DB /* Pods-ZQPlayerIOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -675,6 +779,7 @@
 		};
 		1B44D1F92163B1F000C0F563 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C081EFB8B440236102C06190 /* Pods-ZQPlayerIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ZQPlayerIOSUITests/Info.plist;
@@ -692,6 +797,7 @@
 		};
 		1B44D1FA2163B1F000C0F563 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF865C5BC4C042A9473D768C /* Pods-ZQPlayerIOSUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ZQPlayerIOSUITests/Info.plist;
