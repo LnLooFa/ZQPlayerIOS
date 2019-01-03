@@ -6,14 +6,14 @@
 //  Copyright © 2018年 johnwu. All rights reserved.
 //
 
-#import "SplashViewController.h"
+#import "SplashDemoViewController.h"
 
-@interface SplashViewController ()
+@interface SplashDemoViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
-@implementation SplashViewController
+@implementation SplashDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

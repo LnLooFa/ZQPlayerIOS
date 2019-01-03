@@ -21,6 +21,8 @@
 		1B0DE7AE21932F27006221B7 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DE7AD21932F27006221B7 /* People.m */; };
 		1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */; };
 		1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */; };
+		1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */; };
+		1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */; };
 		1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B24C4DD21C7F34D00DF541C /* LocationViewController.m */; };
 		1B24C4E021C7F34D00DF541C /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */; };
 		1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B27AF5421AAF2E300CB0033 /* ImageViewController.m */; };
@@ -33,10 +35,12 @@
 		1B44D1D92163B1F000C0F563 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1D82163B1F000C0F563 /* main.m */; };
 		1B44D1E32163B1F000C0F563 /* ZQPlayerIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1E22163B1F000C0F563 /* ZQPlayerIOSTests.m */; };
 		1B44D1EE2163B1F000C0F563 /* ZQPlayerIOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1ED2163B1F000C0F563 /* ZQPlayerIOSUITests.m */; };
+		1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2148421DD0C51007E3E3C /* MainViewController.m */; };
+		1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2148F21DD1A80007E3E3C /* SplashViewController.m */; };
 		1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */; };
 		1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */; };
-		1BFD5F072182101700C1829D /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD5F052182101700C1829D /* SplashViewController.m */; };
-		1BFD5F082182101700C1829D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD5F062182101700C1829D /* SplashViewController.xib */; };
+		1BFD5F072182101700C1829D /* SplashDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD5F052182101700C1829D /* SplashDemoViewController.m */; };
+		1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD5F062182101700C1829D /* SplashDemoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,9 @@
 		1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		1B182B1B21DB0DBA0085E5F3 /* NetWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkViewController.h; sourceTree = "<group>"; };
+		1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
+		1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetWorkViewController.xib; sourceTree = "<group>"; };
 		1B24C4DC21C7F34D00DF541C /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		1B24C4DD21C7F34D00DF541C /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
@@ -101,12 +108,16 @@
 		1B44D1E92163B1F000C0F563 /* ZQPlayerIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZQPlayerIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B44D1ED2163B1F000C0F563 /* ZQPlayerIOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQPlayerIOSUITests.m; sourceTree = "<group>"; };
 		1B44D1EF2163B1F000C0F563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB2148321DD0C51007E3E3C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1BB2148421DD0C51007E3E3C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1BB2148E21DD1A80007E3E3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		1BB2148F21DD1A80007E3E3C /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsViewController.h; sourceTree = "<group>"; };
 		1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsViewController.m; sourceTree = "<group>"; };
 		1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSUserDefaultsViewController.xib; sourceTree = "<group>"; };
-		1BFD5F042182101700C1829D /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
-		1BFD5F052182101700C1829D /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
-		1BFD5F062182101700C1829D /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		1BFD5F042182101700C1829D /* SplashDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashDemoViewController.h; sourceTree = "<group>"; };
+		1BFD5F052182101700C1829D /* SplashDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashDemoViewController.m; sourceTree = "<group>"; };
+		1BFD5F062182101700C1829D /* SplashDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashDemoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +150,7 @@
 			children = (
 				1B0A7E74217C0C15001FE450 /* TableViewAdapter.h */,
 				1B0A7E75217C0C15001FE450 /* TableViewAdapter.m */,
+				1B0A7E7C217C2809001FE450 /* ActionItemLayout.xib */,
 			);
 			path = adapter;
 			sourceTree = "<group>";
@@ -157,36 +169,8 @@
 		1B18FBD4217B7006003A4E04 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				1B0A7E7C217C2809001FE450 /* ActionItemLayout.xib */,
-				1B09B23921B3F166000C7514 /* AnimationViewController.h */,
-				1B09B23A21B3F166000C7514 /* AnimationViewController.m */,
-				1B09B23B21B3F166000C7514 /* AnimationViewController.xib */,
-				1B09AE9C21AD973F0017D6F6 /* GreenViewController.h */,
-				1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */,
-				1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */,
-				1B27AF5321AAF2E300CB0033 /* ImageViewController.h */,
-				1B27AF5421AAF2E300CB0033 /* ImageViewController.m */,
-				1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */,
-				1B0A023821B01BBE000F2553 /* MyTabBarViewController.h */,
-				1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */,
-				1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */,
-				1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */,
-				1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */,
-				1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */,
-				1B09AE9721AD96FB0017D6F6 /* RedViewController.h */,
-				1B09AE9821AD96FB0017D6F6 /* RedViewController.m */,
-				1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */,
-				1BFD5F042182101700C1829D /* SplashViewController.h */,
-				1BFD5F052182101700C1829D /* SplashViewController.m */,
-				1BFD5F062182101700C1829D /* SplashViewController.xib */,
-				1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */,
-				1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */,
-				1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */,
-				1B44D1CC2163B1EF00C0F563 /* TableViewController.h */,
-				1B44D1CD2163B1EF00C0F563 /* TableViewController.m */,
-				1B24C4DC21C7F34D00DF541C /* LocationViewController.h */,
-				1B24C4DD21C7F34D00DF541C /* LocationViewController.m */,
-				1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */,
+				1BB2148621DD16DA007E3E3C /* splash */,
+				1BB2148221DCF3B2007E3E3C /* demo */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -219,11 +203,13 @@
 				1B18FBD1217B6FC2003A4E04 /* adapter */,
 				1B44D1C92163B1EF00C0F563 /* AppDelegate.h */,
 				1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */,
+				1B44D1D82163B1F000C0F563 /* main.m */,
 				1B44D1CF2163B1EF00C0F563 /* Main.storyboard */,
+				1BB2148321DD0C51007E3E3C /* MainViewController.h */,
+				1BB2148421DD0C51007E3E3C /* MainViewController.m */,
 				1B44D1D22163B1F000C0F563 /* Assets.xcassets */,
 				1B44D1D42163B1F000C0F563 /* LaunchScreen.storyboard */,
 				1B44D1D72163B1F000C0F563 /* Info.plist */,
-				1B44D1D82163B1F000C0F563 /* main.m */,
 			);
 			path = ZQPlayerIOS;
 			sourceTree = "<group>";
@@ -244,6 +230,54 @@
 				1B44D1EF2163B1F000C0F563 /* Info.plist */,
 			);
 			path = ZQPlayerIOSUITests;
+			sourceTree = "<group>";
+		};
+		1BB2148221DCF3B2007E3E3C /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				1B09B23921B3F166000C7514 /* AnimationViewController.h */,
+				1B09B23A21B3F166000C7514 /* AnimationViewController.m */,
+				1B09B23B21B3F166000C7514 /* AnimationViewController.xib */,
+				1B09AE9C21AD973F0017D6F6 /* GreenViewController.h */,
+				1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */,
+				1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */,
+				1B27AF5321AAF2E300CB0033 /* ImageViewController.h */,
+				1B27AF5421AAF2E300CB0033 /* ImageViewController.m */,
+				1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */,
+				1B0A023821B01BBE000F2553 /* MyTabBarViewController.h */,
+				1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */,
+				1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */,
+				1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */,
+				1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */,
+				1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */,
+				1B09AE9721AD96FB0017D6F6 /* RedViewController.h */,
+				1B09AE9821AD96FB0017D6F6 /* RedViewController.m */,
+				1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */,
+				1BFD5F042182101700C1829D /* SplashDemoViewController.h */,
+				1BFD5F052182101700C1829D /* SplashDemoViewController.m */,
+				1BFD5F062182101700C1829D /* SplashDemoViewController.xib */,
+				1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */,
+				1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */,
+				1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */,
+				1B44D1CC2163B1EF00C0F563 /* TableViewController.h */,
+				1B44D1CD2163B1EF00C0F563 /* TableViewController.m */,
+				1B24C4DC21C7F34D00DF541C /* LocationViewController.h */,
+				1B24C4DD21C7F34D00DF541C /* LocationViewController.m */,
+				1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */,
+				1B182B1B21DB0DBA0085E5F3 /* NetWorkViewController.h */,
+				1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */,
+				1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		1BB2148621DD16DA007E3E3C /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2148E21DD1A80007E3E3C /* SplashViewController.h */,
+				1BB2148F21DD1A80007E3E3C /* SplashViewController.m */,
+			);
+			path = splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,8 +394,9 @@
 				1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */,
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
-				1BFD5F082182101700C1829D /* SplashViewController.xib in Resources */,
+				1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */,
 				1B44D1D12163B1EF00C0F563 /* Main.storyboard in Resources */,
+				1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,16 +426,19 @@
 				1B0DE7AE21932F27006221B7 /* People.m in Sources */,
 				1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */,
 				1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */,
+				1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */,
 				1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */,
 				1B44D1D92163B1F000C0F563 /* main.m in Sources */,
+				1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */,
 				1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */,
 				1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */,
 				1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */,
 				1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */,
+				1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */,
 				1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
 				1B09AE9A21AD96FB0017D6F6 /* RedViewController.m in Sources */,
-				1BFD5F072182101700C1829D /* SplashViewController.m in Sources */,
+				1BFD5F072182101700C1829D /* SplashDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

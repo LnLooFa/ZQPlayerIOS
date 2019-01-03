@@ -2,8 +2,8 @@
 //  SplashViewController.h
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2018/10/25.
-//  Copyright © 2018年 johnwu. All rights reserved.
+//  Created by johnwu on 2019/1/3.
+//  Copyright © 2019年 johnwu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

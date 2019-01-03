@@ -13,7 +13,7 @@
         <!--测试demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TableViewController" sceneMemberID="viewController">
+                <viewController title="测试demo" id="BYZ-38-t0r" customClass="TableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,19 +35,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="测试demo" id="4ot-4g-xdv"/>
+                    <navigationItem key="navigationItem" id="4ot-4g-xdv"/>
                     <connections>
                         <outlet property="tableView" destination="uVk-BL-XER" id="8n1-WX-wWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566.66666666666674" y="305.70652173913044"/>
+            <point key="canvasLocation" x="551" y="-1318"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main View Controller-->
         <scene sceneID="fpU-OP-ou0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qBr-wE-goC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qBr-wE-goC" customClass="MainViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qJN-iw-AK5">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -55,12 +55,51 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Cgb-IX-xcW"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hW1-mK-dDn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOt-zO-P7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339.13043478260875" y="305.70652173913044"/>
+            <point key="canvasLocation" x="-374" y="-578"/>
+        </scene>
+        <!--启动页-->
+        <scene sceneID="xK8-uv-PwD">
+            <objects>
+                <viewController title="启动页" id="gCV-SY-g5d" customClass="SplashViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aB9-kD-4qt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仔仔直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-Ac-6m0">
+                                <rect key="frame" x="172" y="640" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ifa-N2-fB8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gQg-Yu-AwY">
+                                <rect key="frame" x="157" y="515" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gQg-Yu-AwY" firstAttribute="centerX" secondItem="aB9-kD-4qt" secondAttribute="centerX" id="FHy-JA-jm2"/>
+                            <constraint firstItem="5WS-Nq-P3B" firstAttribute="bottom" secondItem="xUd-Ac-6m0" secondAttribute="bottom" constant="76" id="Ubx-I5-gt0"/>
+                            <constraint firstItem="xUd-Ac-6m0" firstAttribute="top" secondItem="gQg-Yu-AwY" secondAttribute="bottom" constant="25" id="dKc-fc-bRi"/>
+                            <constraint firstItem="gQg-Yu-AwY" firstAttribute="centerX" secondItem="xUd-Ac-6m0" secondAttribute="centerX" id="t7K-zV-3VX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5WS-Nq-P3B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ght-ZJ-96U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PF8-mu-sxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550.72463768115949" y="-579.61956521739137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="100" height="100"/>
+    </resources>
 </document>

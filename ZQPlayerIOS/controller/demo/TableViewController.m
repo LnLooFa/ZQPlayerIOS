@@ -22,14 +22,15 @@ NSMutableArray *data;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
      data = [[NSMutableArray alloc]init];
-    NSString *title = [[NSString alloc] initWithFormat:@"scrollview引导页"];
-    [data addObject:[[ActionItemBean alloc]initWith:title target:@"SplashViewController"]];
+    NSString *title = [[NSString alloc] initWithFormat:@"Splash scrollview引导页"];
+    [data addObject:[[ActionItemBean alloc]initWith:title target:@"SplashDemoViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"NSUserDefaults数据缓存" target:@"NSUserDefaultsViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"Image 拉伸" target:@"ImageViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"TabBar 实现 tabBarViewController" target:@"TabBarViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"UITabBarViewController 实践" target:@"MyTabBarViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"动画 实践" target:@"AnimationViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"定位" target:@"LocationViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"网络请求" target:@"NetWorkViewController"]];
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
     _tableView.rowHeight = UITableViewAutomaticDimension;
