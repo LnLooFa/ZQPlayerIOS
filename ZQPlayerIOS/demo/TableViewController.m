@@ -31,6 +31,7 @@ NSMutableArray *data;
     [data addObject:[[ActionItemBean alloc]initWith:@"动画 实践" target:@"AnimationViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"定位" target:@"LocationViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"网络请求" target:@"NetWorkViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"Toast测试" target:@"ToastViewController"]];
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
     _tableView.rowHeight = UITableViewAutomaticDimension;
