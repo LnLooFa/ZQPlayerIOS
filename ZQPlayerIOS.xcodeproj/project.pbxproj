@@ -120,6 +120,7 @@
 		1B95B45621E1E71100F8359D /* ToastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastViewController.h; sourceTree = "<group>"; };
 		1B95B45721E1E71100F8359D /* ToastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
 		1B95B45821E1E71100F8359D /* ToastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastViewController.xib; sourceTree = "<group>"; };
+		1B95B45B21E1ED3600F8359D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1BB2148321DD0C51007E3E3C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1BB2148421DD0C51007E3E3C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1BB2148E21DD1A80007E3E3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 				1B44D1D22163B1F000C0F563 /* Assets.xcassets */,
 				1B44D1D42163B1F000C0F563 /* LaunchScreen.storyboard */,
 				1B44D1D72163B1F000C0F563 /* Info.plist */,
+				1B95B45B21E1ED3600F8359D /* PrefixHeader.pch */,
 			);
 			path = ZQPlayerIOS;
 			sourceTree = "<group>";
@@ -741,6 +743,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQPlayerIOS/PrefixHeader.pch";
 				INFOPLIST_FILE = ZQPlayerIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -759,6 +763,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQPlayerIOS/PrefixHeader.pch";
 				INFOPLIST_FILE = ZQPlayerIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

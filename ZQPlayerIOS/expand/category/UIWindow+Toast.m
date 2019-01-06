@@ -8,7 +8,6 @@
 
 #import "UIWindow+Toast.h"
 #import "AppDelegate.h"
-#import <Toast/UIView+Toast.h>
 
 @implementation UIWindow (Toast)
 

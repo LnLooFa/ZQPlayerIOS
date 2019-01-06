@@ -7,7 +7,6 @@
 //
 
 #import "ToastViewController.h"
-#import "UIWindow+Toast.h"
 @interface ToastViewController ()
 
 @end
