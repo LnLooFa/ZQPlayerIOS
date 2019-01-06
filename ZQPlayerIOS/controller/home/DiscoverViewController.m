@@ -1,31 +1,24 @@
 //
-//  MainViewController.m
+//  DiscoverViewController.m
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2019/1/2.
+//  Created by johnwu on 2019/1/6.
 //  Copyright © 2019年 johnwu. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "DiscoverViewController.h"
 
-@interface MainViewController ()
+@interface DiscoverViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation DiscoverViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    Boolean isShowDemo = false;
-    if(isShowDemo){
-        [self performSegueWithIdentifier:@"showDemo" sender:self];
-    }else{
-        [self performSegueWithIdentifier:@"showSplash" sender:self];
-    }
+    // Do any additional setup after loading the view from its nib.
+    NSLog(@"发现");
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

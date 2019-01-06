@@ -1,31 +1,26 @@
 //
-//  MainViewController.m
+//  HomeViewController.m
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2019/1/2.
+//  Created by johnwu on 2019/1/6.
 //  Copyright © 2019年 johnwu. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "HomeViewController.h"
 
-@interface MainViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
     
-    Boolean isShowDemo = false;
-    if(isShowDemo){
-        [self performSegueWithIdentifier:@"showDemo" sender:self];
-    }else{
-        [self performSegueWithIdentifier:@"showSplash" sender:self];
-    }
+    NSLog(@"首页");
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

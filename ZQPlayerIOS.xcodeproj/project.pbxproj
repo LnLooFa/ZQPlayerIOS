@@ -38,6 +38,17 @@
 		1B95B45521E1E17A00F8359D /* UIWindow+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B45421E1E17A00F8359D /* UIWindow+Toast.m */; };
 		1B95B45921E1E71100F8359D /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B45721E1E71100F8359D /* ToastViewController.m */; };
 		1B95B45A21E1E71100F8359D /* ToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B45821E1E71100F8359D /* ToastViewController.xib */; };
+		1B95B46021E1FA8500F8359D /* HomeTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B45E21E1FA8500F8359D /* HomeTabBarViewController.m */; };
+		1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B46D21E2471900F8359D /* HomeViewController.m */; };
+		1B95B47021E2471900F8359D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B46E21E2471900F8359D /* HomeViewController.xib */; };
+		1B95B47721E2474B00F8359D /* AmusementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B47521E2474B00F8359D /* AmusementViewController.m */; };
+		1B95B47821E2474B00F8359D /* AmusementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B47621E2474B00F8359D /* AmusementViewController.xib */; };
+		1B95B47C21E2475F00F8359D /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B47A21E2475F00F8359D /* SubscribeViewController.m */; };
+		1B95B47D21E2475F00F8359D /* SubscribeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B47B21E2475F00F8359D /* SubscribeViewController.xib */; };
+		1B95B48121E2477200F8359D /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B47F21E2477200F8359D /* DiscoverViewController.m */; };
+		1B95B48221E2477200F8359D /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B48021E2477200F8359D /* DiscoverViewController.xib */; };
+		1B95B48621E2478500F8359D /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B48421E2478500F8359D /* MineViewController.m */; };
+		1B95B48721E2478500F8359D /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B48521E2478500F8359D /* MineViewController.xib */; };
 		1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2148421DD0C51007E3E3C /* MainViewController.m */; };
 		1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2148F21DD1A80007E3E3C /* SplashViewController.m */; };
 		1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */; };
@@ -121,6 +132,23 @@
 		1B95B45721E1E71100F8359D /* ToastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastViewController.m; sourceTree = "<group>"; };
 		1B95B45821E1E71100F8359D /* ToastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastViewController.xib; sourceTree = "<group>"; };
 		1B95B45B21E1ED3600F8359D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1B95B45D21E1FA8500F8359D /* HomeTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabBarViewController.h; sourceTree = "<group>"; };
+		1B95B45E21E1FA8500F8359D /* HomeTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTabBarViewController.m; sourceTree = "<group>"; };
+		1B95B46C21E2471900F8359D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1B95B46D21E2471900F8359D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1B95B46E21E2471900F8359D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1B95B47421E2474B00F8359D /* AmusementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmusementViewController.h; sourceTree = "<group>"; };
+		1B95B47521E2474B00F8359D /* AmusementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmusementViewController.m; sourceTree = "<group>"; };
+		1B95B47621E2474B00F8359D /* AmusementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmusementViewController.xib; sourceTree = "<group>"; };
+		1B95B47921E2475F00F8359D /* SubscribeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubscribeViewController.h; sourceTree = "<group>"; };
+		1B95B47A21E2475F00F8359D /* SubscribeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewController.m; sourceTree = "<group>"; };
+		1B95B47B21E2475F00F8359D /* SubscribeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeViewController.xib; sourceTree = "<group>"; };
+		1B95B47E21E2477200F8359D /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		1B95B47F21E2477200F8359D /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		1B95B48021E2477200F8359D /* DiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
+		1B95B48321E2478500F8359D /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		1B95B48421E2478500F8359D /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		1B95B48521E2478500F8359D /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		1BB2148321DD0C51007E3E3C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1BB2148421DD0C51007E3E3C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1BB2148E21DD1A80007E3E3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
@@ -193,6 +221,7 @@
 		1B18FBD4217B7006003A4E04 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1B95B45C21E1FA4B00F8359D /* home */,
 				1BB2148621DD16DA007E3E3C /* splash */,
 			);
 			path = controller;
@@ -275,6 +304,30 @@
 				1B95B45421E1E17A00F8359D /* UIWindow+Toast.m */,
 			);
 			path = category;
+			sourceTree = "<group>";
+		};
+		1B95B45C21E1FA4B00F8359D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				1B95B45D21E1FA8500F8359D /* HomeTabBarViewController.h */,
+				1B95B45E21E1FA8500F8359D /* HomeTabBarViewController.m */,
+				1B95B46C21E2471900F8359D /* HomeViewController.h */,
+				1B95B46D21E2471900F8359D /* HomeViewController.m */,
+				1B95B46E21E2471900F8359D /* HomeViewController.xib */,
+				1B95B47421E2474B00F8359D /* AmusementViewController.h */,
+				1B95B47521E2474B00F8359D /* AmusementViewController.m */,
+				1B95B47621E2474B00F8359D /* AmusementViewController.xib */,
+				1B95B47921E2475F00F8359D /* SubscribeViewController.h */,
+				1B95B47A21E2475F00F8359D /* SubscribeViewController.m */,
+				1B95B47B21E2475F00F8359D /* SubscribeViewController.xib */,
+				1B95B47E21E2477200F8359D /* DiscoverViewController.h */,
+				1B95B47F21E2477200F8359D /* DiscoverViewController.m */,
+				1B95B48021E2477200F8359D /* DiscoverViewController.xib */,
+				1B95B48321E2478500F8359D /* MineViewController.h */,
+				1B95B48421E2478500F8359D /* MineViewController.m */,
+				1B95B48521E2478500F8359D /* MineViewController.xib */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		1BB2148221DCF3B2007E3E3C /* demo */ = {
@@ -460,18 +513,23 @@
 				1B09AE9B21AD96FB0017D6F6 /* RedViewController.xib in Resources */,
 				1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */,
 				1B0A7E7D217C2809001FE450 /* ActionItemLayout.xib in Resources */,
+				1B95B47D21E2475F00F8359D /* SubscribeViewController.xib in Resources */,
 				1B24C4E021C7F34D00DF541C /* LocationViewController.xib in Resources */,
 				1B09B23D21B3F166000C7514 /* AnimationViewController.xib in Resources */,
 				1B44D1D62163B1F000C0F563 /* LaunchScreen.storyboard in Resources */,
 				1B0A023C21B01BBE000F2553 /* MyTabBarViewController.xib in Resources */,
 				1B44D1D32163B1F000C0F563 /* Assets.xcassets in Resources */,
 				1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */,
+				1B95B48221E2477200F8359D /* DiscoverViewController.xib in Resources */,
 				1B95B45A21E1E71100F8359D /* ToastViewController.xib in Resources */,
+				1B95B47821E2474B00F8359D /* AmusementViewController.xib in Resources */,
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
+				1B95B48721E2478500F8359D /* MineViewController.xib in Resources */,
 				1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */,
 				1B44D1D12163B1EF00C0F563 /* Main.storyboard in Resources */,
 				1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */,
+				1B95B47021E2471900F8359D /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,18 +615,24 @@
 				1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */,
 				1B0DE7AE21932F27006221B7 /* People.m in Sources */,
 				1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */,
+				1B95B47721E2474B00F8359D /* AmusementViewController.m in Sources */,
+				1B95B47C21E2475F00F8359D /* SubscribeViewController.m in Sources */,
 				1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */,
 				1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */,
+				1B95B46021E1FA8500F8359D /* HomeTabBarViewController.m in Sources */,
 				1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */,
 				1B44D1D92163B1F000C0F563 /* main.m in Sources */,
 				1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */,
 				1B95B45521E1E17A00F8359D /* UIWindow+Toast.m in Sources */,
 				1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */,
 				1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */,
+				1B95B48621E2478500F8359D /* MineViewController.m in Sources */,
+				1B95B48121E2477200F8359D /* DiscoverViewController.m in Sources */,
 				1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */,
 				1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */,
 				1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */,
 				1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */,
+				1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
 				1B09AE9A21AD96FB0017D6F6 /* RedViewController.m in Sources */,
 				1B95B45921E1E71100F8359D /* ToastViewController.m in Sources */,

@@ -1,31 +1,24 @@
 //
-//  MainViewController.m
+//  SubscribeViewController.m
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2019/1/2.
+//  Created by johnwu on 2019/1/6.
 //  Copyright © 2019年 johnwu. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "SubscribeViewController.h"
 
-@interface MainViewController ()
+@interface SubscribeViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation SubscribeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    Boolean isShowDemo = false;
-    if(isShowDemo){
-        [self performSegueWithIdentifier:@"showDemo" sender:self];
-    }else{
-        [self performSegueWithIdentifier:@"showSplash" sender:self];
-    }
+    // Do any additional setup after loading the view from its nib.
+    NSLog(@"订阅");
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

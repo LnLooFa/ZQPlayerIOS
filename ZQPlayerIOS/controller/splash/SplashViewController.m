@@ -7,6 +7,7 @@
 //
 
 #import "SplashViewController.h"
+#import "HomeTabBarViewController.h"
 
 @interface SplashViewController ()
 
@@ -17,7 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"SplashViewController viewcontrollers 数量 %lu",[[[self navigationController] viewControllers] count]);
+    [[[self navigationController] viewControllers] enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"%lu - %@",(unsigned long)idx, obj);
+    }];
+    [self navigateToHomeTabBar];
+//    [[self navigationController] pushViewController:homeViewController animated:true];
 }
+
+- (void)viewDidAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:true];
+}
+
+- (void)navigateToHomeTabBar{
+    HomeTabBarViewController *homeViewController = [[HomeTabBarViewController alloc] init];
+    NSArray<__kindof UIViewController *> *viewControllers = [[NSArray alloc] initWithObjects:homeViewController, nil];
+    
+    
+    [[self navigationController] setViewControllers:viewControllers];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

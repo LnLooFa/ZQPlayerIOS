@@ -1,31 +1,24 @@
 //
-//  MainViewController.m
+//  AmusementViewController.m
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2019/1/2.
+//  Created by johnwu on 2019/1/6.
 //  Copyright © 2019年 johnwu. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "AmusementViewController.h"
 
-@interface MainViewController ()
+@interface AmusementViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation AmusementViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    Boolean isShowDemo = false;
-    if(isShowDemo){
-        [self performSegueWithIdentifier:@"showDemo" sender:self];
-    }else{
-        [self performSegueWithIdentifier:@"showSplash" sender:self];
-    }
+    // Do any additional setup after loading the view from its nib.
+    NSLog(@"娱乐");
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
