@@ -31,10 +31,12 @@
 }
 
 - (void)navigateToHomeTabBar{
-    HomeTabBarViewController *homeViewController = [[HomeTabBarViewController alloc] init];
+//    HomeTabBarViewController *homeViewController = [[HomeTabBarViewController alloc] init];
+    
+    UIStoryboard *homeTabBar = [UIStoryboard storyboardWithName:@"HomeTabBar" bundle:[NSBundle mainBundle]];
+    UITabBarController *homeViewController = [homeTabBar instantiateInitialViewController];
+    
     NSArray<__kindof UIViewController *> *viewControllers = [[NSArray alloc] initWithObjects:homeViewController, nil];
-    
-    
     [[self navigationController] setViewControllers:viewControllers];
 }
 

@@ -22,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+//    [self initConrtoller];
+}
+
+- (void)initConrtoller {
     NSArray *titleList = @[@"首页",@"娱乐",@"订阅",@"发现",@"我的"];
     NSArray *imageList = @[@"icon_home_normal",
                            @"icon_amusement_normal",
@@ -29,10 +33,10 @@
                            @"icon_discover_normal",
                            @"icon_mine_normal"];
     NSArray *selectedImageList = @[@"icon_home_selected",
-                           @"icon_amusement_selected",
-                           @"icon_subscribe_selected",
-                           @"icon_discover_selected",
-                           @"icon_mine_selected"];
+                                   @"icon_amusement_selected",
+                                   @"icon_subscribe_selected",
+                                   @"icon_discover_selected",
+                                   @"icon_mine_selected"];
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     AmusementViewController *amusementVC = [[AmusementViewController alloc] init];
     SubscribeViewController *subscribeVC = [[SubscribeViewController alloc] init];

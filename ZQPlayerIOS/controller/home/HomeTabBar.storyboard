@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hcc-dL-Wi2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="fOf-IF-EqK">
+            <objects>
+                <viewController id="bXx-f9-dEv" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EjE-Fu-ubO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaR-qZ-h1d">
+                                <rect key="frame" x="166" y="125" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nN4-6I-ZMo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="icon_home_normal" selectedImage="icon_home_selected" id="hE9-bG-Wpc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pH8-Sk-NSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2190" y="245"/>
+        </scene>
+        <!--娱乐-->
+        <scene sceneID="axn-mj-dOg">
+            <objects>
+                <viewController id="3Lm-vy-aZI" customClass="AmusementViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D73-FM-cNh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FT-G3-pB5">
+                                <rect key="frame" x="166" y="216" width="42" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EZY-5C-rPn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="娱乐" image="icon_amusement_normal" selectedImage="icon_amusement_selected" id="6UC-59-eSw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0U-Kj-iRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1511.2" y="246.9265367316342"/>
+        </scene>
+        <!--订阅-->
+        <scene sceneID="hdz-4O-PfA">
+            <objects>
+                <viewController id="HQU-R9-vfg" customClass="SubscribeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0yV-Vi-jQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ld-0Y-FpK">
+                                <rect key="frame" x="166" y="292" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KIr-Hx-gNN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="订阅" image="icon_subscribe_normal" selectedImage="icon_subscribe_selected" id="cvB-Bc-DdG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eG-yO-l40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="247"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="sGn-Gw-x97">
+            <objects>
+                <viewController id="mle-I9-gzB" customClass="DiscoverViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6O-bx-8Uk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zn-M5-LUc">
+                                <rect key="frame" x="166" y="336" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="T8m-i4-1cz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="发现" image="icon_discover_normal" selectedImage="icon_discover_selected" id="hlm-Fp-iMs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTY-b3-pHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="249"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="dtt-7B-TCj">
+            <objects>
+                <viewController id="YTj-s4-QwY" customClass="MineViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oj7-PX-zCO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-XG-OFq">
+                                <rect key="frame" x="166" y="370" width="42" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Dq-H2-hJL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="icon_mine_normal" selectedImage="icon_mine_selected" id="zn8-Df-yCU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Azr-DC-bwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.60000000000002" y="248.72563718140933"/>
+        </scene>
+        <!--Home Tab Bar View Controller-->
+        <scene sceneID="Am2-qV-yDU">
+            <objects>
+                <tabBarController id="Hcc-dL-Wi2" customClass="HomeTabBarViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0j-9N-NKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bXx-f9-dEv" kind="relationship" relationship="viewControllers" id="LUO-44-GO8"/>
+                        <segue destination="3Lm-vy-aZI" kind="relationship" relationship="viewControllers" id="GpP-ur-MnA"/>
+                        <segue destination="HQU-R9-vfg" kind="relationship" relationship="viewControllers" id="KQr-EY-gA0"/>
+                        <segue destination="mle-I9-gzB" kind="relationship" relationship="viewControllers" id="p83-fK-0hz"/>
+                        <segue destination="YTj-s4-QwY" kind="relationship" relationship="viewControllers" id="GVh-Jh-jb4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3S-6W-sXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-803" y="-548"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_amusement_normal" width="33" height="26"/>
+        <image name="icon_amusement_selected" width="33" height="26"/>
+        <image name="icon_discover_normal" width="33" height="26"/>
+        <image name="icon_discover_selected" width="33" height="26"/>
+        <image name="icon_home_normal" width="33" height="26"/>
+        <image name="icon_home_selected" width="32" height="26"/>
+        <image name="icon_mine_normal" width="32" height="26"/>
+        <image name="icon_mine_selected" width="33" height="26"/>
+        <image name="icon_subscribe_normal" width="33" height="26"/>
+        <image name="icon_subscribe_selected" width="33" height="26"/>
+    </resources>
+</document>
