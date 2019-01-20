@@ -19,9 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[self navigationController] setNavigationBarHidden:true];
+    
     // Do any additional setup after loading the view from its nib.
     UIImage *image1 = [UIImage imageNamed:@"goldImage"];
     _imageView1.image = image1;
+//    _imageView1.frame = CGRectMake(_imageView1.frame.origin.x*2,
+//                                   kStatusBarHeight,
+//                                   _imageView1.frame.size.width,
+//                                   _imageView1.frame.size.height);
     
     UIImage *image2 = [image1 stretchableImageWithLeftCapWidth:0 topCapHeight:image1.size.height*0.5];
     _imageView2.image = image2;

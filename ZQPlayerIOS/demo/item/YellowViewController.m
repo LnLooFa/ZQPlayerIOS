@@ -1,23 +1,22 @@
 //
-//  AmusementViewController.m
+//  YellowViewController.m
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2019/1/6.
+//  Created by johnwu on 2019/1/13.
 //  Copyright © 2019年 johnwu. All rights reserved.
 //
 
-#import "AmusementViewController.h"
+#import "YellowViewController.h"
 
-@interface AmusementViewController ()
+@interface YellowViewController ()
 
 @end
 
-@implementation AmusementViewController
+@implementation YellowViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    NSLog(@"娱乐");
+    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
 }
 

@@ -21,9 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
-//    [self initConrtoller];
+    [self initConrtoller];
 }
+
 
 - (void)initConrtoller {
     NSArray *titleList = @[@"首页",@"娱乐",@"订阅",@"发现",@"我的"];
@@ -38,6 +40,8 @@
                                    @"icon_discover_selected",
                                    @"icon_mine_selected"];
     HomeViewController *homeVC = [[HomeViewController alloc] init];
+    homeVC.titleColorSelected = [UIColor colorWithHexString:@"#ffa200" alpha:1];//生命周期原因 要在这里设置
+    
     AmusementViewController *amusementVC = [[AmusementViewController alloc] init];
     SubscribeViewController *subscribeVC = [[SubscribeViewController alloc] init];
     DiscoverViewController *discoverVC = [[DiscoverViewController alloc] init];
@@ -63,6 +67,7 @@
      }];
     
     self.viewControllers = viewControllersArray;
+    self.tabBar.backgroundColor = [UIColor whiteColor];
 }
 
 

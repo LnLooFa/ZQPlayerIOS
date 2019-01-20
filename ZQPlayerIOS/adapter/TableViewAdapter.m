@@ -48,7 +48,7 @@
     UIViewController *detailClass = [[objClass alloc] init];
 //    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:detailClass];
 //    [self.controller presentViewController:detailClass animated:true completion:NULL];
-    detailClass.edgesForExtendedLayout = UIRectEdgeNone;
+    detailClass.edgesForExtendedLayout = UIRectEdgeNone;// 在导航栏以下
     [self.controller.navigationController pushViewController:detailClass animated:YES];
 
 }

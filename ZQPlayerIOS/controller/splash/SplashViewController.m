@@ -8,6 +8,7 @@
 
 #import "SplashViewController.h"
 #import "HomeTabBarViewController.h"
+#import "HomeViewController.h"
 
 @interface SplashViewController ()
 
@@ -31,10 +32,7 @@
 }
 
 - (void)navigateToHomeTabBar{
-//    HomeTabBarViewController *homeViewController = [[HomeTabBarViewController alloc] init];
-    
-    UIStoryboard *homeTabBar = [UIStoryboard storyboardWithName:@"HomeTabBar" bundle:[NSBundle mainBundle]];
-    UITabBarController *homeViewController = [homeTabBar instantiateInitialViewController];
+    HomeTabBarViewController *homeViewController = [[HomeTabBarViewController alloc] init];
     
     NSArray<__kindof UIViewController *> *viewControllers = [[NSArray alloc] initWithObjects:homeViewController, nil];
     [[self navigationController] setViewControllers:viewControllers];

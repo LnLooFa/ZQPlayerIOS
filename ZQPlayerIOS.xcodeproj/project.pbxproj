@@ -23,11 +23,24 @@
 		1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */; };
 		1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */; };
 		1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */; };
+		1B1A5D5821F443A300BCB8E5 /* ConstraintTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */; };
+		1B20F6D021E640CC004756FD /* HorizontalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B20F6CE21E640CC004756FD /* HorizontalTableViewController.m */; };
+		1B20F6D121E640CC004756FD /* HorizontalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B20F6CF21E640CC004756FD /* HorizontalTableViewController.xib */; };
+		1B20F6D621E64626004756FD /* CollectionViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B20F6D421E64626004756FD /* CollectionViewViewController.m */; };
+		1B20F6D721E64626004756FD /* CollectionViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B20F6D521E64626004756FD /* CollectionViewViewController.xib */; };
+		1B20F6DB21E64B1F004756FD /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B20F6DA21E64B1F004756FD /* MyCollectionViewCell.xib */; };
+		1B20F6DE21E64BA2004756FD /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B20F6DD21E64BA2004756FD /* MyCollectionViewCell.m */; };
+		1B22AF2821EB120100557E54 /* UiTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B22AF2721EB120000557E54 /* UiTools.m */; };
+		1B22AF2B21EB39C500557E54 /* YellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B22AF2A21EB39C500557E54 /* YellowViewController.m */; };
 		1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B24C4DD21C7F34D00DF541C /* LocationViewController.m */; };
 		1B24C4E021C7F34D00DF541C /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */; };
+		1B26034621ECD4CE00EEEA27 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B26034521ECD4CE00EEEA27 /* UIColor+Util.m */; };
 		1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B27AF5421AAF2E300CB0033 /* ImageViewController.m */; };
 		1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */; };
-		1B28989B21E392A300D558E2 /* HomeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B28989A21E392A300D558E2 /* HomeTabBar.storyboard */; };
+		1B27C88221EE2CE20073F27A /* WMLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B27C88121EE2CE20073F27A /* WMLoopView.m */; };
+		1B2D8A9521E4F66100D28628 /* ImageLoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */; };
+		1B2D8A9621E4F66100D28628 /* ImageLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */; };
+		1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */; };
 		1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */; };
 		1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CD2163B1EF00C0F563 /* TableViewController.m */; };
 		1B44D1D12163B1EF00C0F563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B44D1CF2163B1EF00C0F563 /* Main.storyboard */; };
@@ -100,13 +113,37 @@
 		1B182B1B21DB0DBA0085E5F3 /* NetWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkViewController.h; sourceTree = "<group>"; };
 		1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
 		1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetWorkViewController.xib; sourceTree = "<group>"; };
+		1B1A5D5621F443A300BCB8E5 /* ConstraintTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstraintTestViewController.h; sourceTree = "<group>"; };
+		1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstraintTestViewController.m; sourceTree = "<group>"; };
+		1B20F6CD21E640CC004756FD /* HorizontalTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalTableViewController.h; sourceTree = "<group>"; };
+		1B20F6CE21E640CC004756FD /* HorizontalTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalTableViewController.m; sourceTree = "<group>"; };
+		1B20F6CF21E640CC004756FD /* HorizontalTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTableViewController.xib; sourceTree = "<group>"; };
+		1B20F6D321E64626004756FD /* CollectionViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewViewController.h; sourceTree = "<group>"; };
+		1B20F6D421E64626004756FD /* CollectionViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewViewController.m; sourceTree = "<group>"; };
+		1B20F6D521E64626004756FD /* CollectionViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewViewController.xib; sourceTree = "<group>"; };
+		1B20F6DA21E64B1F004756FD /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		1B20F6DC21E64BA2004756FD /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		1B20F6DD21E64BA2004756FD /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		1B22AEE521EAD77F00557E54 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
+		1B22AF2621EB120000557E54 /* UiTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UiTools.h; sourceTree = "<group>"; };
+		1B22AF2721EB120000557E54 /* UiTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UiTools.m; sourceTree = "<group>"; };
+		1B22AF2921EB39C500557E54 /* YellowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YellowViewController.h; sourceTree = "<group>"; };
+		1B22AF2A21EB39C500557E54 /* YellowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YellowViewController.m; sourceTree = "<group>"; };
 		1B24C4DC21C7F34D00DF541C /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		1B24C4DD21C7F34D00DF541C /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
+		1B26034421ECD4CE00EEEA27 /* UIColor+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
+		1B26034521ECD4CE00EEEA27 /* UIColor+Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
 		1B27AF5321AAF2E300CB0033 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		1B27AF5421AAF2E300CB0033 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
-		1B28989A21E392A300D558E2 /* HomeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabBar.storyboard; sourceTree = "<group>"; };
+		1B27C88021EE2CE20073F27A /* WMLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLoopView.h; sourceTree = "<group>"; };
+		1B27C88121EE2CE20073F27A /* WMLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLoopView.m; sourceTree = "<group>"; };
+		1B2D8A9221E4F66000D28628 /* ImageLoaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoaderViewController.h; sourceTree = "<group>"; };
+		1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderViewController.m; sourceTree = "<group>"; };
+		1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLoaderViewController.xib; sourceTree = "<group>"; };
+		1B3BE6D221EF5FF200D96A7C /* VideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
+		1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
 		1B44D1C62163B1EF00C0F563 /* ZQPlayerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQPlayerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B44D1C92163B1EF00C0F563 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -213,10 +250,95 @@
 		1B18FBD4217B7006003A4E04 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1B26034721ECDE8D00EEEA27 /* video */,
 				1B95B45C21E1FA4B00F8359D /* home */,
 				1BB2148621DD16DA007E3E3C /* splash */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		1B20F6D221E64161004756FD /* item */ = {
+			isa = PBXGroup;
+			children = (
+				1B09B23921B3F166000C7514 /* AnimationViewController.h */,
+				1B09B23A21B3F166000C7514 /* AnimationViewController.m */,
+				1B09B23B21B3F166000C7514 /* AnimationViewController.xib */,
+				1B09AE9C21AD973F0017D6F6 /* GreenViewController.h */,
+				1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */,
+				1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */,
+				1B27AF5321AAF2E300CB0033 /* ImageViewController.h */,
+				1B27AF5421AAF2E300CB0033 /* ImageViewController.m */,
+				1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */,
+				1B0A023821B01BBE000F2553 /* MyTabBarViewController.h */,
+				1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */,
+				1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */,
+				1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */,
+				1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */,
+				1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */,
+				1B09AE9721AD96FB0017D6F6 /* RedViewController.h */,
+				1B09AE9821AD96FB0017D6F6 /* RedViewController.m */,
+				1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */,
+				1BFD5F042182101700C1829D /* SplashDemoViewController.h */,
+				1BFD5F052182101700C1829D /* SplashDemoViewController.m */,
+				1BFD5F062182101700C1829D /* SplashDemoViewController.xib */,
+				1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */,
+				1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */,
+				1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */,
+				1B24C4DC21C7F34D00DF541C /* LocationViewController.h */,
+				1B24C4DD21C7F34D00DF541C /* LocationViewController.m */,
+				1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */,
+				1B182B1B21DB0DBA0085E5F3 /* NetWorkViewController.h */,
+				1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */,
+				1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */,
+				1B95B45621E1E71100F8359D /* ToastViewController.h */,
+				1B95B45721E1E71100F8359D /* ToastViewController.m */,
+				1B95B45821E1E71100F8359D /* ToastViewController.xib */,
+				1B2D8A9221E4F66000D28628 /* ImageLoaderViewController.h */,
+				1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */,
+				1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */,
+				1B20F6CD21E640CC004756FD /* HorizontalTableViewController.h */,
+				1B20F6CE21E640CC004756FD /* HorizontalTableViewController.m */,
+				1B20F6CF21E640CC004756FD /* HorizontalTableViewController.xib */,
+				1B20F6D321E64626004756FD /* CollectionViewViewController.h */,
+				1B20F6D421E64626004756FD /* CollectionViewViewController.m */,
+				1B20F6D521E64626004756FD /* CollectionViewViewController.xib */,
+				1B20F6DC21E64BA2004756FD /* MyCollectionViewCell.h */,
+				1B20F6DD21E64BA2004756FD /* MyCollectionViewCell.m */,
+				1B20F6DA21E64B1F004756FD /* MyCollectionViewCell.xib */,
+				1B22AF2921EB39C500557E54 /* YellowViewController.h */,
+				1B22AF2A21EB39C500557E54 /* YellowViewController.m */,
+				1B1A5D5621F443A300BCB8E5 /* ConstraintTestViewController.h */,
+				1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */,
+			);
+			path = item;
+			sourceTree = "<group>";
+		};
+		1B22AEE421EAD76600557E54 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				1B22AEE521EAD77F00557E54 /* UtilsMacro.h */,
+				1B22AF2621EB120000557E54 /* UiTools.h */,
+				1B22AF2721EB120000557E54 /* UiTools.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		1B26034721ECDE8D00EEEA27 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				1B3BE6D221EF5FF200D96A7C /* VideoListViewController.h */,
+				1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		1B27C87F21EE2C7D0073F27A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1B27C88021EE2CE20073F27A /* WMLoopView.h */,
+				1B27C88121EE2CE20073F27A /* WMLoopView.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		1B44D1BD2163B1EF00C0F563 = {
@@ -284,6 +406,8 @@
 		1B95B45121E1B04500F8359D /* expand */ = {
 			isa = PBXGroup;
 			children = (
+				1B27C87F21EE2C7D0073F27A /* view */,
+				1B22AEE421EAD76600557E54 /* util */,
 				1B95B45221E1B21B00F8359D /* category */,
 			);
 			path = expand;
@@ -294,6 +418,8 @@
 			children = (
 				1B95B45321E1E17A00F8359D /* UIWindow+Toast.h */,
 				1B95B45421E1E17A00F8359D /* UIWindow+Toast.m */,
+				1B26034421ECD4CE00EEEA27 /* UIColor+Util.h */,
+				1B26034521ECD4CE00EEEA27 /* UIColor+Util.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -303,7 +429,6 @@
 			children = (
 				1B95B45D21E1FA8500F8359D /* HomeTabBarViewController.h */,
 				1B95B45E21E1FA8500F8359D /* HomeTabBarViewController.m */,
-				1B28989A21E392A300D558E2 /* HomeTabBar.storyboard */,
 				1B95B46C21E2471900F8359D /* HomeViewController.h */,
 				1B95B46D21E2471900F8359D /* HomeViewController.m */,
 				1B95B47421E2474B00F8359D /* AmusementViewController.h */,
@@ -321,41 +446,9 @@
 		1BB2148221DCF3B2007E3E3C /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				1B09B23921B3F166000C7514 /* AnimationViewController.h */,
-				1B09B23A21B3F166000C7514 /* AnimationViewController.m */,
-				1B09B23B21B3F166000C7514 /* AnimationViewController.xib */,
-				1B09AE9C21AD973F0017D6F6 /* GreenViewController.h */,
-				1B09AE9D21AD973F0017D6F6 /* GreenViewController.m */,
-				1B09AE9E21AD973F0017D6F6 /* GreenViewController.xib */,
-				1B27AF5321AAF2E300CB0033 /* ImageViewController.h */,
-				1B27AF5421AAF2E300CB0033 /* ImageViewController.m */,
-				1B27AF5521AAF2E300CB0033 /* ImageViewController.xib */,
-				1B0A023821B01BBE000F2553 /* MyTabBarViewController.h */,
-				1B0A023921B01BBE000F2553 /* MyTabBarViewController.m */,
-				1B0A023A21B01BBE000F2553 /* MyTabBarViewController.xib */,
-				1BB78847218FE386000D28E5 /* NSUserDefaultsViewController.h */,
-				1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */,
-				1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */,
-				1B09AE9721AD96FB0017D6F6 /* RedViewController.h */,
-				1B09AE9821AD96FB0017D6F6 /* RedViewController.m */,
-				1B09AE9921AD96FB0017D6F6 /* RedViewController.xib */,
-				1BFD5F042182101700C1829D /* SplashDemoViewController.h */,
-				1BFD5F052182101700C1829D /* SplashDemoViewController.m */,
-				1BFD5F062182101700C1829D /* SplashDemoViewController.xib */,
-				1B0E2FCC21AC2ACA00B1389C /* TabBarViewController.h */,
-				1B0E2FCD21AC2ACA00B1389C /* TabBarViewController.m */,
-				1B0E2FCE21AC2ACA00B1389C /* TabBarViewController.xib */,
+				1B20F6D221E64161004756FD /* item */,
 				1B44D1CC2163B1EF00C0F563 /* TableViewController.h */,
 				1B44D1CD2163B1EF00C0F563 /* TableViewController.m */,
-				1B24C4DC21C7F34D00DF541C /* LocationViewController.h */,
-				1B24C4DD21C7F34D00DF541C /* LocationViewController.m */,
-				1B24C4DE21C7F34D00DF541C /* LocationViewController.xib */,
-				1B182B1B21DB0DBA0085E5F3 /* NetWorkViewController.h */,
-				1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */,
-				1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */,
-				1B95B45621E1E71100F8359D /* ToastViewController.h */,
-				1B95B45721E1E71100F8359D /* ToastViewController.m */,
-				1B95B45821E1E71100F8359D /* ToastViewController.xib */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -403,6 +496,7 @@
 				1B44D1C22163B1EF00C0F563 /* Sources */,
 				1B44D1C32163B1EF00C0F563 /* Frameworks */,
 				1B44D1C42163B1EF00C0F563 /* Resources */,
+				A5EC9EEE6EBE8FED7DA829CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,15 +593,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B09AE9B21AD96FB0017D6F6 /* RedViewController.xib in Resources */,
+				1B2D8A9621E4F66100D28628 /* ImageLoaderViewController.xib in Resources */,
+				1B20F6D721E64626004756FD /* CollectionViewViewController.xib in Resources */,
 				1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */,
 				1B0A7E7D217C2809001FE450 /* ActionItemLayout.xib in Resources */,
 				1B24C4E021C7F34D00DF541C /* LocationViewController.xib in Resources */,
 				1B09B23D21B3F166000C7514 /* AnimationViewController.xib in Resources */,
 				1B44D1D62163B1F000C0F563 /* LaunchScreen.storyboard in Resources */,
-				1B28989B21E392A300D558E2 /* HomeTabBar.storyboard in Resources */,
 				1B0A023C21B01BBE000F2553 /* MyTabBarViewController.xib in Resources */,
+				1B20F6DB21E64B1F004756FD /* MyCollectionViewCell.xib in Resources */,
 				1B44D1D32163B1F000C0F563 /* Assets.xcassets in Resources */,
 				1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */,
+				1B20F6D121E640CC004756FD /* HorizontalTableViewController.xib in Resources */,
 				1B95B45A21E1E71100F8359D /* ToastViewController.xib in Resources */,
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
@@ -588,6 +685,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5EC9EEE6EBE8FED7DA829CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZQPlayerIOS/Pods-ZQPlayerIOS-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZQPlayerIOS/Pods-ZQPlayerIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -602,13 +717,22 @@
 				1B95B47721E2474B00F8359D /* AmusementViewController.m in Sources */,
 				1B95B47C21E2475F00F8359D /* SubscribeViewController.m in Sources */,
 				1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */,
+				1B22AF2821EB120100557E54 /* UiTools.m in Sources */,
+				1B20F6D021E640CC004756FD /* HorizontalTableViewController.m in Sources */,
 				1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */,
+				1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */,
 				1B95B46021E1FA8500F8359D /* HomeTabBarViewController.m in Sources */,
 				1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */,
+				1B1A5D5821F443A300BCB8E5 /* ConstraintTestViewController.m in Sources */,
+				1B27C88221EE2CE20073F27A /* WMLoopView.m in Sources */,
+				1B22AF2B21EB39C500557E54 /* YellowViewController.m in Sources */,
 				1B44D1D92163B1F000C0F563 /* main.m in Sources */,
 				1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */,
 				1B95B45521E1E17A00F8359D /* UIWindow+Toast.m in Sources */,
+				1B20F6DE21E64BA2004756FD /* MyCollectionViewCell.m in Sources */,
 				1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */,
+				1B2D8A9521E4F66100D28628 /* ImageLoaderViewController.m in Sources */,
+				1B26034621ECD4CE00EEEA27 /* UIColor+Util.m in Sources */,
 				1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */,
 				1B95B48621E2478500F8359D /* MineViewController.m in Sources */,
 				1B95B48121E2477200F8359D /* DiscoverViewController.m in Sources */,
@@ -617,6 +741,7 @@
 				1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */,
 				1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */,
 				1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */,
+				1B20F6D621E64626004756FD /* CollectionViewViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
 				1B09AE9A21AD96FB0017D6F6 /* RedViewController.m in Sources */,
 				1B95B45921E1E71100F8359D /* ToastViewController.m in Sources */,
