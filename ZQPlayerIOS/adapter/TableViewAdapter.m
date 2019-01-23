@@ -29,13 +29,15 @@
 //    ActionItemBean *bean = [_source objectAtIndex:[indexPath row]];
 //    cell.textLabel.text = bean.title;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"actionItemLayout"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseActionItemLayout"];
     if(!cell){
+        //在xib文件中设置了 reuseIdentifier，，才能复用
         NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"ActionItemLayout" owner:self options:nil];
         cell = [nibViews objectAtIndex:0];
     }
     UIImageView *pic = (UIImageView *)[cell viewWithTag:1];
     UILabel *nameLab = (UILabel *)[cell viewWithTag:2];
+    NSLog(@"ziq  %@", nameLab.text);
     ActionItemBean* bean = _source[indexPath.row];
     [nameLab setText:bean.title];
     

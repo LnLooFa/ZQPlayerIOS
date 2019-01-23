@@ -49,5 +49,9 @@
 #define kTabBarHeight      (IS_IPhoneX ? 83 : 49)  // 适配iPhoneX 底栏高度
 #define kTabBarPostionY    (IS_IPhoneX ? 24 : 0)   // 适配iPhoneX 底栏
 
-
+#define kRGBColorA(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+/**
+ * 随机色
+ */
+#define MJRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
 #endif /* UtilsMacro_h */

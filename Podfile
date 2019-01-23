@@ -18,7 +18,8 @@ target 'ZQPlayerIOS' do
     pod 'MJRefresh', '~> 3.1.15'
     #布局约束库
     pod 'Masonry', '~> 1.1.0'
-
+    #banner
+    pod 'SDCycleScrollView', '~> 1.75'
 
 
     target 'ZQPlayerIOSTests' do

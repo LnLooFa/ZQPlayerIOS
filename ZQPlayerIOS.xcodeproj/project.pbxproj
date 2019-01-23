@@ -40,6 +40,7 @@
 		1B27C88221EE2CE20073F27A /* WMLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B27C88121EE2CE20073F27A /* WMLoopView.m */; };
 		1B2D8A9521E4F66100D28628 /* ImageLoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */; };
 		1B2D8A9621E4F66100D28628 /* ImageLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */; };
+		1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */; };
 		1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */; };
 		1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */; };
 		1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CD2163B1EF00C0F563 /* TableViewController.m */; };
@@ -142,6 +143,7 @@
 		1B2D8A9221E4F66000D28628 /* ImageLoaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoaderViewController.h; sourceTree = "<group>"; };
 		1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderViewController.m; sourceTree = "<group>"; };
 		1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLoaderViewController.xib; sourceTree = "<group>"; };
+		1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		1B3BE6D221EF5FF200D96A7C /* VideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
 		1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
 		1B44D1C62163B1EF00C0F563 /* ZQPlayerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQPlayerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,6 +330,7 @@
 			children = (
 				1B3BE6D221EF5FF200D96A7C /* VideoListViewController.h */,
 				1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */,
+				1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */,
 			);
 			path = video;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				1B95B45A21E1E71100F8359D /* ToastViewController.xib in Resources */,
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
+				1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */,
 				1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */,
 				1B44D1D12163B1EF00C0F563 /* Main.storyboard in Resources */,
 				1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */,

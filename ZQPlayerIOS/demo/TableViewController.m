@@ -21,7 +21,6 @@ NSMutableArray *data;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     // Do any additional setup after loading the view, typically from a nib.
      data = [[NSMutableArray alloc]init];
     NSString *title = [[NSString alloc] initWithFormat:@"Splash scrollview引导页"];
@@ -38,6 +37,7 @@ NSMutableArray *data;
     [data addObject:[[ActionItemBean alloc]initWith:@"水平table测试" target:@"HorizontalTableViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"CollectionView测试" target:@"CollectionViewViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"布局约束测试" target:@"ConstraintTestViewController"]];
+    
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
     _tableView.rowHeight = UITableViewAutomaticDimension;
