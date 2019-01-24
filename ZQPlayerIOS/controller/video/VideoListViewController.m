@@ -45,8 +45,8 @@ static const CGFloat MJDuration = 2.0;
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.view);
-        make.left.mas_equalTo(self.view);
-        make.right.mas_equalTo(self.view);
+        make.left.mas_equalTo(self.view).mas_offset(5);
+        make.right.mas_equalTo(self.view).mas_offset(-5);
     }];
     
     // 下拉刷新
@@ -114,13 +114,32 @@ static const CGFloat MJDuration = 2.0;
     searchView.translatesAutoresizingMaskIntoConstraints=NO;
     searchView.backgroundColor = [UIColor colorWithHexString:@"#f4f4f4" alpha:1.0];
     searchView.layer.cornerRadius = 15;
+    UILabel* searchLabel =[[UILabel alloc] init];
+    UIImageView* searchScan =[[UIImageView alloc] init];
+    [searchView addSubview:searchLabel];
+    [searchView addSubview:searchScan];
+    
     [headerView addSubview:searchView];
+    searchLabel.font = [UIFont systemFontOfSize:14];
+    searchLabel.text = @"一起看|S8|轩子巨2兔子";
+    UIImage *imageScan=[UIImage imageNamed:@"icon_scan"];
+    searchScan.image=imageScan;
     
     [searchView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(headerView).mas_offset(10);
         make.left.mas_equalTo(headerView).mas_offset(15);
         make.right.mas_equalTo(headerView).mas_offset(-15);
         make.height.mas_equalTo(30);
+    }];
+    [searchLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo([searchView mas_centerY]);
+        make.centerX.mas_equalTo([searchView mas_centerX]);
+    }];
+    [searchScan mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo([searchView mas_right]).mas_offset(-10);
+        make.centerY.mas_equalTo([searchView mas_centerY]);
+        make.height.mas_equalTo(20);
+        make.width.mas_equalTo(20);
     }];
     
     NSArray *images = @[@"banner1",@"banner2",@"banner3",@"banner4"];
@@ -134,10 +153,59 @@ static const CGFloat MJDuration = 2.0;
     bannerView.imageURLStringsGroup = images;
     [bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo([searchView mas_bottom]).mas_offset(10);
-        make.bottom.mas_equalTo([headerView mas_bottom]).mas_offset(-10);
         make.left.mas_equalTo(headerView);
         make.right.mas_equalTo(headerView);
         make.height.mas_equalTo(150);
+    }];
+    
+    UIView* titleView = [[UIView alloc] init];
+    UIImageView* iconLeft =[[UIImageView alloc] init];
+    UILabel* labelLeft =[[UILabel alloc] init];
+    UIImageView* iconArrow =[[UIImageView alloc] init];
+    UILabel* labelRight =[[UILabel alloc] init];
+    [titleView addSubview:iconLeft];
+    [titleView addSubview:labelLeft];
+    [titleView addSubview:iconArrow];
+    [titleView addSubview:labelRight];
+    [headerView addSubview:titleView];
+    
+    
+    
+    [titleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo([bannerView mas_bottom]).mas_offset(10);
+        make.bottom.mas_equalTo([headerView mas_bottom]).mas_offset(-20);
+        make.left.mas_equalTo(headerView).mas_offset(5);
+        make.right.mas_equalTo(headerView).mas_offset(-5);
+        make.height.mas_equalTo(40);
+    }];
+    
+    UIImage *image1=[UIImage imageNamed:@"icon_heart_title_left"];
+    iconLeft.image=image1;
+    UIImage *image2=[UIImage imageNamed:@"icon_right_arrow"];
+    iconArrow.image=image2;
+    labelLeft.text = @"全部直播";
+    labelLeft.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    labelRight.text = @"S8全球总决赛热播中";
+    [iconLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo([titleView mas_centerY]);
+        make.left.mas_equalTo(titleView);
+        make.height.mas_equalTo(20);
+        make.width.mas_equalTo(20);
+    }];
+    [labelLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo([titleView mas_centerY]);
+        make.left.mas_equalTo([iconLeft mas_right]);
+        
+    }];
+    [iconArrow mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo([titleView mas_centerY]);
+        make.left.mas_equalTo([labelLeft mas_right]);
+        make.height.mas_equalTo(20);
+        make.width.mas_equalTo(20);
+    }];
+    [labelRight mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo([titleView mas_centerY]);
+        make.right.mas_equalTo(titleView);
     }];
     return headerView;
 }
@@ -148,7 +216,7 @@ static const CGFloat MJDuration = 2.0;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    return CGSizeMake(kScreenWidth, 220);
+    return CGSizeMake(kScreenWidth, 270);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -179,7 +247,7 @@ static const CGFloat MJDuration = 2.0;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(kScreenWidth / 2 - 5 , 120);
+    return CGSizeMake((kScreenWidth - 10) / 2 - 5 , 120);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -190,10 +258,14 @@ static const CGFloat MJDuration = 2.0;
         cell = [nibViews objectAtIndex:0];
     }
     UIImageView *pic = (UIImageView *)[cell viewWithTag:1];
+    pic.layer.cornerRadius = 5;
+    pic.clipsToBounds = YES;
     UILabel *nameLab = (UILabel *)[cell viewWithTag:2];
     VideoListItemModel* item = self.videoList[indexPath.row];
+    
     [pic sd_setImageWithURL:item.imageUrl];
     nameLab.text = item.name;
+    
     return cell;
 }
 
