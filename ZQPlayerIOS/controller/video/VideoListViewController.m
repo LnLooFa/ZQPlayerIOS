@@ -257,6 +257,10 @@ static const CGFloat MJDuration = 2.0;
         NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"VideoItemCell" owner:self options:nil];
         cell = [nibViews objectAtIndex:0];
     }
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     UIImageView *pic = (UIImageView *)[cell viewWithTag:1];
     pic.layer.cornerRadius = 5;
     pic.clipsToBounds = YES;
@@ -265,8 +269,6 @@ static const CGFloat MJDuration = 2.0;
     
     [pic sd_setImageWithURL:item.imageUrl];
     nameLab.text = item.name;
-    
-    return cell;
 }
 
 
