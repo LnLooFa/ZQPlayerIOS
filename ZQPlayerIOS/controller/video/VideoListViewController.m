@@ -8,13 +8,15 @@
 
 #import "VideoListViewController.h"
 #import <SDCycleScrollView.h>
-
+#import "NetworkingManager.h"
+#import "VideoListItemModel.h"
 static const CGFloat MJDuration = 2.0;
 
 @interface VideoListViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong) UICollectionView * collectionView;
-@property (strong, nonatomic) NSMutableArray *colors;
+@property(strong, nonatomic) NSMutableArray *videoList;
+@property(assign, nonatomic) NSInteger pageNumber;
 @end
 
 @implementation VideoListViewController
@@ -47,41 +49,59 @@ static const CGFloat MJDuration = 2.0;
         make.right.mas_equalTo(self.view);
     }];
     
-    
-    
-    __weak __typeof(self) weakSelf = self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"color"];
     // 下拉刷新
     self.collectionView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        // 增加5条假数据
-        for (int i = 0; i<10; i++) {
-            [weakSelf.colors insertObject:MJRandomColor atIndex:0];
-        }
-
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(MJDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf.collectionView reloadData];
-
-            // 结束刷新
-            [weakSelf.collectionView.mj_header endRefreshing];
-        });
+        self.pageNumber = 1;
+        [self loadData:self.pageNumber];
     }];
     // 上拉刷新
     self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 增加5条假数据
-        for (int i = 0; i<5; i++) {
-            [weakSelf.colors addObject:MJRandomColor];
-        }
-        
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(MJDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf.collectionView reloadData];
-            // 结束刷新
-            [weakSelf.collectionView.mj_footer endRefreshing];
-        });
+        self.pageNumber++;
+        [self loadData:self.pageNumber];
     }];
     [self.collectionView.mj_header beginRefreshing];
 
+}
+
+-(void)loadData:(NSInteger)page{
+    __weak __typeof(self) weakSelf = self;
+    NSString *pageNumberString = [NSString stringWithFormat:@"%ld",page];
+    NSString *urlStr = @"http://193.112.65.251:8080/live/list";
+    NSDictionary* parmeters = @{
+                                @"pageno" : pageNumberString,
+                                @"pagenum" : @"20",
+                                @"cate" : @"lol",
+                                @"room" : @"1",
+                                @"version" : @"3.3.1.5978"
+                                };
+    [[NetworkingManager shareManager] POST:urlStr parameters:parmeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dict = responseObject;
+        @try {
+            int code = [[dict objectForKey:@"code"] intValue];
+            if (code == 1) {
+                NSDictionary *dataDict = [dict objectForKey:@"data"];
+                NSArray *videolist = [VideoListItemModel mj_objectArrayWithKeyValuesArray:dataDict];
+                if(videolist != nil && videolist.count > 0){
+                    if(page == 1){
+                        [self.videoList removeAllObjects];
+                    }
+                    [self.videoList addObjectsFromArray:videolist];
+                }
+                [self.collectionView reloadData];
+            }else {
+                NSString *message = [dict objectForKey:@"msg"];
+                NSLog(@"请求失败 %@",message);
+            }
+        } @catch (NSException *exception) {
+            NSLog(@"获取验证码报错 %@",exception);
+        }
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView.mj_footer endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败  %@ ",error);
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView.mj_footer endRefreshing];
+    }];
 }
 
 -(UIView*)setUpHeaderVie{
@@ -155,7 +175,7 @@ static const CGFloat MJDuration = 2.0;
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.colors.count;
+    return self.videoList.count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -171,18 +191,19 @@ static const CGFloat MJDuration = 2.0;
     }
     UIImageView *pic = (UIImageView *)[cell viewWithTag:1];
     UILabel *nameLab = (UILabel *)[cell viewWithTag:2];
-    pic.backgroundColor = self.colors[indexPath.row];
-    nameLab.text = [NSString stringWithFormat: @"%ld", (long)indexPath.row];
+    VideoListItemModel* item = self.videoList[indexPath.row];
+    [pic sd_setImageWithURL:item.imageUrl];
+    nameLab.text = item.name;
     return cell;
 }
 
 
-- (NSMutableArray *)colors
+- (NSMutableArray *)videoList
 {
-    if (!_colors) {
-        self.colors = [NSMutableArray array];
+    if (!_videoList) {
+        self.videoList = [NSMutableArray array];
     }
-    return _colors;
+    return _videoList;
 }
 
 - (void)didReceiveMemoryWarning {

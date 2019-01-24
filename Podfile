@@ -12,6 +12,8 @@ target 'ZQPlayerIOS' do
     pod 'SDWebImage', '~> 4.3.3'
     #网络请求库
     pod 'AFNetworking', '~> 3.2.1'
+    #json解析库
+    pod 'MJExtension','~> 3.0.13'
     #头部滚动菜单， 如网易 新闻
     pod 'WMPageController', '~> 2.4.0'
     #下拉刷新，上拉加载更多库

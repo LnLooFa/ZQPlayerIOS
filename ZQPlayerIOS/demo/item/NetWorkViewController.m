@@ -7,12 +7,13 @@
 //
 
 #import "NetWorkViewController.h"
-
+#import "User.h"
 @interface NetWorkViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UILabel *result2;
 
+@property (weak, nonatomic) IBOutlet UILabel *result3;
 
 @end
 
@@ -59,6 +60,67 @@ NSURLRequest * request;
         }
     }];
     [task resume];
+}
+
+- (IBAction)requestUrl3:(id)sender {
+    NSString *urlStr = @"http://193.112.65.251:8080/myuser/all";
+    //1.创建会话管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        NSDictionary *dict = responseObject;
+        @try {
+            int code = [[dict objectForKey:@"code"] intValue];
+            if (code == 0) {
+                NSDictionary *dataDict = [dict objectForKey:@"data"];
+                NSDictionary *usersDict = [dataDict objectForKey:@"users"];
+                NSArray *userlist = [User mj_objectArrayWithKeyValuesArray:usersDict];
+                NSLog(@"请求成功  %lu ",(unsigned long)userlist.count);
+                if(userlist != nil && userlist.count > 0){
+                    User* user = userlist[0];
+                    NSLog(@"请求成功  %@ ",user.name);
+                }
+                
+            }
+            else {
+                NSString *message = [dict objectForKey:@"msg"];
+                NSLog(@"请求失败 %@",message);
+            }
+        } @catch (NSException *exception) {
+            NSLog(@"获取验证码报错 %@",exception);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败  %@ ",error);
+    }];
+}
+
+- (IBAction)request4:(id)sender {
+    NSString *urlStr = @"http://193.112.65.251:8080/live/list";
+    NSDictionary* parmeters = @{
+                                @"pageno" : @"1",
+                                @"pagenum" : @"20",
+                                @"cate" : @"lol",
+                                @"room" : @"1",
+                                @"version" : @"3.3.1.5978"
+                                };
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    /**设置请求超时时间*/
+    manager.requestSerializer.timeoutInterval = 30.0f;
+    /**设置相应的缓存策略*/
+    manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    /**分别设置请求以及相应的序列化器*/
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    /**分别设置返回以及相应的反序列化器*/
+    AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer = response;
+    [manager.requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    [manager POST:urlStr parameters:parmeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"请求成功  %@ ",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败  %@ ",error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

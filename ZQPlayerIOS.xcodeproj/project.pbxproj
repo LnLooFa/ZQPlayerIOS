@@ -40,6 +40,9 @@
 		1B27C88221EE2CE20073F27A /* WMLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B27C88121EE2CE20073F27A /* WMLoopView.m */; };
 		1B2D8A9521E4F66100D28628 /* ImageLoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */; };
 		1B2D8A9621E4F66100D28628 /* ImageLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */; };
+		1B2F126C21F99A720092D461 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F126B21F99A720092D461 /* User.m */; };
+		1B2F127021F9A43F0092D461 /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F126F21F9A43F0092D461 /* NetworkingManager.m */; };
+		1B2F127321F9A8200092D461 /* VideoListItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F127221F9A8200092D461 /* VideoListItemModel.m */; };
 		1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */; };
 		1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */; };
 		1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */; };
@@ -143,6 +146,12 @@
 		1B2D8A9221E4F66000D28628 /* ImageLoaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoaderViewController.h; sourceTree = "<group>"; };
 		1B2D8A9321E4F66000D28628 /* ImageLoaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderViewController.m; sourceTree = "<group>"; };
 		1B2D8A9421E4F66000D28628 /* ImageLoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLoaderViewController.xib; sourceTree = "<group>"; };
+		1B2F126A21F99A720092D461 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1B2F126B21F99A720092D461 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		1B2F126E21F9A43F0092D461 /* NetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingManager.h; sourceTree = "<group>"; };
+		1B2F126F21F9A43F0092D461 /* NetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingManager.m; sourceTree = "<group>"; };
+		1B2F127121F9A8200092D461 /* VideoListItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListItemModel.h; sourceTree = "<group>"; };
+		1B2F127221F9A8200092D461 /* VideoListItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListItemModel.m; sourceTree = "<group>"; };
 		1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		1B3BE6D221EF5FF200D96A7C /* VideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
 		1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
@@ -245,6 +254,10 @@
 				1B0A7E78217C188A001FE450 /* ActionItemBean.m */,
 				1B0DE7AC21932F27006221B7 /* People.h */,
 				1B0DE7AD21932F27006221B7 /* People.m */,
+				1B2F126A21F99A720092D461 /* User.h */,
+				1B2F126B21F99A720092D461 /* User.m */,
+				1B2F127121F9A8200092D461 /* VideoListItemModel.h */,
+				1B2F127221F9A8200092D461 /* VideoListItemModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -344,6 +357,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		1B2F126D21F9A4160092D461 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				1B2F126E21F9A43F0092D461 /* NetworkingManager.h */,
+				1B2F126F21F9A43F0092D461 /* NetworkingManager.m */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		1B44D1BD2163B1EF00C0F563 = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +431,7 @@
 		1B95B45121E1B04500F8359D /* expand */ = {
 			isa = PBXGroup;
 			children = (
+				1B2F126D21F9A4160092D461 /* manager */,
 				1B27C87F21EE2C7D0073F27A /* view */,
 				1B22AEE421EAD76600557E54 /* util */,
 				1B95B45221E1B21B00F8359D /* category */,
@@ -714,6 +737,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2F126C21F99A720092D461 /* User.m in Sources */,
+				1B2F127321F9A8200092D461 /* VideoListItemModel.m in Sources */,
 				1B0A023B21B01BBE000F2553 /* MyTabBarViewController.m in Sources */,
 				1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */,
 				1B0DE7AE21932F27006221B7 /* People.m in Sources */,
@@ -744,6 +769,7 @@
 				1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */,
 				1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */,
 				1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */,
+				1B2F127021F9A43F0092D461 /* NetworkingManager.m in Sources */,
 				1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */,
 				1B20F6D621E64626004756FD /* CollectionViewViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
