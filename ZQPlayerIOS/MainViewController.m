@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    Boolean isShowDemo = false;
+    Boolean isShowDemo = true;
     if(isShowDemo){
         [self performSegueWithIdentifier:@"showDemo" sender:self];
     }else{

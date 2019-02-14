@@ -37,7 +37,6 @@
     }
     UIImageView *pic = (UIImageView *)[cell viewWithTag:1];
     UILabel *nameLab = (UILabel *)[cell viewWithTag:2];
-    NSLog(@"ziq  %@", nameLab.text);
     ActionItemBean* bean = _source[indexPath.row];
     [nameLab setText:bean.title];
     

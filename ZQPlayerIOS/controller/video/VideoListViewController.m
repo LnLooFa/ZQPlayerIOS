@@ -10,6 +10,8 @@
 #import <SDCycleScrollView.h>
 #import "NetworkingManager.h"
 #import "VideoListItemModel.h"
+#import "VideoPlayViewController.h"
+
 static const CGFloat MJDuration = 2.0;
 
 @interface VideoListViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -269,6 +271,11 @@ static const CGFloat MJDuration = 2.0;
     
     [pic sd_setImageWithURL:item.imageUrl];
     nameLab.text = item.name;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    VideoPlayViewController* playController = [[VideoPlayViewController alloc] init];
+    [self.navigationController pushViewController:playController animated:true];
 }
 
 

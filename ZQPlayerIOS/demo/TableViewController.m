@@ -37,7 +37,9 @@ NSMutableArray *data;
     [data addObject:[[ActionItemBean alloc]initWith:@"水平table测试" target:@"HorizontalTableViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"CollectionView测试" target:@"CollectionViewViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"布局约束测试" target:@"ConstraintTestViewController"]];
-    
+    [data addObject:[[ActionItemBean alloc]initWith:@"音频测试" target:@"AudioViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"视频测试" target:@"VideoViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"FFmpeg测试" target:@"FFmpegTestViewController"]];
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
     _tableView.rowHeight = UITableViewAutomaticDimension;

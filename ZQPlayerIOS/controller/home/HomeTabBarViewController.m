@@ -72,7 +72,7 @@
 
 
 - (void)viewDidAppear:(BOOL)animated{
-    [[self navigationController] setNavigationBarHidden:true];
+    [[self navigationController] setNavigationBarHidden:true animated:false];
     NSLog(@" ViewController  %@", [self navigationController] );
 }
 

@@ -28,7 +28,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [[self navigationController] setNavigationBarHidden:true];
+    [[self navigationController] setNavigationBarHidden:true animated:false];
 }
 
 - (void)navigateToHomeTabBar{
