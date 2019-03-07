@@ -95,7 +95,6 @@
 		1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB78849218FE386000D28E5 /* NSUserDefaultsViewController.xib */; };
 		1BBBB8EE2215BB99000ED53E /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8E72215BB99000ED53E /* libavutil.a */; };
 		1BBBB8EF2215BB99000ED53E /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8E82215BB99000ED53E /* libavfilter.a */; };
-		1BBBB8F02215BB99000ED53E /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8E92215BB99000ED53E /* libavcodec.a */; };
 		1BBBB8F12215BB99000ED53E /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8EA2215BB99000ED53E /* libavformat.a */; };
 		1BBBB8F22215BB99000ED53E /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8EB2215BB99000ED53E /* libavdevice.a */; };
 		1BBBB8F32215BB99000ED53E /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8EC2215BB99000ED53E /* libswresample.a */; };
@@ -392,7 +391,6 @@
 		1BBBB8E52215BB99000ED53E /* swresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swresample.h; sourceTree = "<group>"; };
 		1BBBB8E72215BB99000ED53E /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		1BBBB8E82215BB99000ED53E /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
-		1BBBB8E92215BB99000ED53E /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
 		1BBBB8EA2215BB99000ED53E /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
 		1BBBB8EB2215BB99000ED53E /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		1BBBB8EC2215BB99000ED53E /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
@@ -443,7 +441,6 @@
 				1BBBB8F42215BB99000ED53E /* libswscale.a in Frameworks */,
 				1BBBB8EE2215BB99000ED53E /* libavutil.a in Frameworks */,
 				C057A39F7915932774CEC9F2 /* libPods-ZQPlayerIOS.a in Frameworks */,
-				1BBBB8F02215BB99000ED53E /* libavcodec.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,7 +989,6 @@
 			children = (
 				1BBBB8E72215BB99000ED53E /* libavutil.a */,
 				1BBBB8E82215BB99000ED53E /* libavfilter.a */,
-				1BBBB8E92215BB99000ED53E /* libavcodec.a */,
 				1BBBB8EA2215BB99000ED53E /* libavformat.a */,
 				1BBBB8EB2215BB99000ED53E /* libavdevice.a */,
 				1BBBB8EC2215BB99000ED53E /* libswresample.a */,
