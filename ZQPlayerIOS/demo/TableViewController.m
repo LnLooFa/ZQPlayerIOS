@@ -43,6 +43,9 @@ NSMutableArray *data;
     [data addObject:[[ActionItemBean alloc]initWith:@"AVPlayer测试" target:@"AVPlayerTestViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"ImagePicker测试" target:@"ImagePickerViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"多线程测试" target:@"ThreadTestViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"openGl显示图片测试" target:@"ShowPhotoViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"openGl2显示图片测试" target:@"GlShowPhotoViewController"]];
+    [data addObject:[[ActionItemBean alloc]initWith:@"ffmpeg播放视频测试" target:@"PlayerVideoViewController"]];
     
     _tableViewAdapter = [[TableViewAdapter alloc] initWithSource:data Controller:self];
     _tableView.rowHeight = UITableViewAutomaticDimension;

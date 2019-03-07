@@ -24,12 +24,22 @@
 		1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */; };
 		1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */; };
 		1B1A5D5821F443A300BCB8E5 /* ConstraintTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */; };
+		1B1C6F9C222129FA0078CE6C /* ZQPlayerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C6F9B222129FA0078CE6C /* ZQPlayerFrame.m */; };
+		1B1C6FA022212A990078CE6C /* ZQPlayerFrameVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C6F9F22212A990078CE6C /* ZQPlayerFrameVideo.m */; };
+		1B1C6FA322212C240078CE6C /* ZQPlayerFrameVideoRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C6FA222212C240078CE6C /* ZQPlayerFrameVideoRGB.m */; };
+		1B1C6FA6222261700078CE6C /* GlShowPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C6FA5222261700078CE6C /* GlShowPhotoViewController.m */; };
+		1B1C6FA92222685F0078CE6C /* OpenGlVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C6FA82222685F0078CE6C /* OpenGlVertexShader.glsl */; };
+		1B1C6FAB222268950078CE6C /* OpenGlRGBFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C6FAA222268950078CE6C /* OpenGlRGBFragmentShader.glsl */; };
 		1B1CD28E22166D860077B6A3 /* AVPlayerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD28C22166D860077B6A3 /* AVPlayerTestViewController.m */; };
 		1B1CD28F22166D860077B6A3 /* AVPlayerTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD28D22166D860077B6A3 /* AVPlayerTestViewController.xib */; };
 		1B1CD29322199ABA0077B6A3 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD29122199ABA0077B6A3 /* ImagePickerViewController.m */; };
 		1B1CD29422199ABA0077B6A3 /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD29222199ABA0077B6A3 /* ImagePickerViewController.xib */; };
 		1B1CD297221A5C070077B6A3 /* ThreadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD296221A5C070077B6A3 /* ThreadTestViewController.m */; };
 		1B1CD299221A5C6A0077B6A3 /* ThreadTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD298221A5C6A0077B6A3 /* ThreadTestViewController.xib */; };
+		1B1CD2A4221E534F0077B6A3 /* ShowPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD2A3221E534F0077B6A3 /* ShowPhotoViewController.m */; };
+		1B1CD2A6221E84500077B6A3 /* scenery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD2A5221E84500077B6A3 /* scenery.jpg */; };
+		1B1CD2A8221E8F480077B6A3 /* butterfly.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD2A7221E8F480077B6A3 /* butterfly.png */; };
+		1B1CD2AB221EB3950077B6A3 /* PlayerVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD2AA221EB3950077B6A3 /* PlayerVideoViewController.m */; };
 		1B200B6921FF49D600FA5816 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B200B6821FF49D600FA5816 /* VideoViewController.m */; };
 		1B200B6B21FF4A5C00FA5816 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B200B6A21FF4A5C00FA5816 /* MediaPlayer.framework */; };
 		1B200B6D21FF552900FA5816 /* gao_bai_qi_qiu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B200B6C21FF552900FA5816 /* gao_bai_qi_qiu.mp4 */; };
@@ -150,6 +160,16 @@
 		1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetWorkViewController.xib; sourceTree = "<group>"; };
 		1B1A5D5621F443A300BCB8E5 /* ConstraintTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstraintTestViewController.h; sourceTree = "<group>"; };
 		1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstraintTestViewController.m; sourceTree = "<group>"; };
+		1B1C6F9A222129FA0078CE6C /* ZQPlayerFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQPlayerFrame.h; sourceTree = "<group>"; };
+		1B1C6F9B222129FA0078CE6C /* ZQPlayerFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQPlayerFrame.m; sourceTree = "<group>"; };
+		1B1C6F9E22212A990078CE6C /* ZQPlayerFrameVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQPlayerFrameVideo.h; sourceTree = "<group>"; };
+		1B1C6F9F22212A990078CE6C /* ZQPlayerFrameVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQPlayerFrameVideo.m; sourceTree = "<group>"; };
+		1B1C6FA122212C240078CE6C /* ZQPlayerFrameVideoRGB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQPlayerFrameVideoRGB.h; sourceTree = "<group>"; };
+		1B1C6FA222212C240078CE6C /* ZQPlayerFrameVideoRGB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQPlayerFrameVideoRGB.m; sourceTree = "<group>"; };
+		1B1C6FA4222261700078CE6C /* GlShowPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlShowPhotoViewController.h; sourceTree = "<group>"; };
+		1B1C6FA5222261700078CE6C /* GlShowPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlShowPhotoViewController.m; sourceTree = "<group>"; };
+		1B1C6FA82222685F0078CE6C /* OpenGlVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenGlVertexShader.glsl; sourceTree = "<group>"; };
+		1B1C6FAA222268950078CE6C /* OpenGlRGBFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenGlRGBFragmentShader.glsl; sourceTree = "<group>"; };
 		1B1CD28B22166D860077B6A3 /* AVPlayerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerTestViewController.h; sourceTree = "<group>"; };
 		1B1CD28C22166D860077B6A3 /* AVPlayerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerTestViewController.m; sourceTree = "<group>"; };
 		1B1CD28D22166D860077B6A3 /* AVPlayerTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AVPlayerTestViewController.xib; sourceTree = "<group>"; };
@@ -159,6 +179,12 @@
 		1B1CD295221A5C070077B6A3 /* ThreadTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTestViewController.h; sourceTree = "<group>"; };
 		1B1CD296221A5C070077B6A3 /* ThreadTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTestViewController.m; sourceTree = "<group>"; };
 		1B1CD298221A5C6A0077B6A3 /* ThreadTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreadTestViewController.xib; sourceTree = "<group>"; };
+		1B1CD2A2221E534F0077B6A3 /* ShowPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowPhotoViewController.h; sourceTree = "<group>"; };
+		1B1CD2A3221E534F0077B6A3 /* ShowPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowPhotoViewController.m; sourceTree = "<group>"; };
+		1B1CD2A5221E84500077B6A3 /* scenery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scenery.jpg; sourceTree = "<group>"; };
+		1B1CD2A7221E8F480077B6A3 /* butterfly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly.png; sourceTree = "<group>"; };
+		1B1CD2A9221EB3950077B6A3 /* PlayerVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerVideoViewController.h; sourceTree = "<group>"; };
+		1B1CD2AA221EB3950077B6A3 /* PlayerVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerVideoViewController.m; sourceTree = "<group>"; };
 		1B200B6721FF49D600FA5816 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		1B200B6821FF49D600FA5816 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		1B200B6A21FF4A5C00FA5816 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -444,6 +470,7 @@
 		1B18FBD2217B6FD5003A4E04 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				1B1C6F9D22212A420078CE6C /* player */,
 				1B0A7E77217C188A001FE450 /* ActionItemBean.h */,
 				1B0A7E78217C188A001FE450 /* ActionItemBean.m */,
 				1B0DE7AC21932F27006221B7 /* People.h */,
@@ -464,6 +491,41 @@
 				1BB2148621DD16DA007E3E3C /* splash */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		1B1C6F9D22212A420078CE6C /* player */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C6F9A222129FA0078CE6C /* ZQPlayerFrame.h */,
+				1B1C6F9B222129FA0078CE6C /* ZQPlayerFrame.m */,
+				1B1C6F9E22212A990078CE6C /* ZQPlayerFrameVideo.h */,
+				1B1C6F9F22212A990078CE6C /* ZQPlayerFrameVideo.m */,
+				1B1C6FA122212C240078CE6C /* ZQPlayerFrameVideoRGB.h */,
+				1B1C6FA222212C240078CE6C /* ZQPlayerFrameVideoRGB.m */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
+		1B1C6FA7222268070078CE6C /* opengl */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C6FAA222268950078CE6C /* OpenGlRGBFragmentShader.glsl */,
+				1B1C6FA82222685F0078CE6C /* OpenGlVertexShader.glsl */,
+			);
+			path = opengl;
+			sourceTree = "<group>";
+		};
+		1B1CD2A1221CEFA50077B6A3 /* opengl */ = {
+			isa = PBXGroup;
+			children = (
+				1B1CD2A2221E534F0077B6A3 /* ShowPhotoViewController.h */,
+				1B1CD2A3221E534F0077B6A3 /* ShowPhotoViewController.m */,
+				1B1CD2A9221EB3950077B6A3 /* PlayerVideoViewController.h */,
+				1B1CD2AA221EB3950077B6A3 /* PlayerVideoViewController.m */,
+				1B1C6FA4222261700078CE6C /* GlShowPhotoViewController.h */,
+				1B1C6FA5222261700078CE6C /* GlShowPhotoViewController.m */,
+			);
+			path = opengl;
 			sourceTree = "<group>";
 		};
 		1B20F6D221E64161004756FD /* item */ = {
@@ -590,6 +652,9 @@
 		1B2F127F21FDE86D0092D461 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				1B1C6FA7222268070078CE6C /* opengl */,
+				1B1CD2A7221E8F480077B6A3 /* butterfly.png */,
+				1B1CD2A5221E84500077B6A3 /* scenery.jpg */,
 				1B200B6C21FF552900FA5816 /* gao_bai_qi_qiu.mp4 */,
 				1B2F128621FE04670092D461 /* gang_hao_yu_jian_ni.mp3 */,
 				1B2F128221FDFD350092D461 /* gang_hao_yu_jian_ni.aac */,
@@ -706,6 +771,7 @@
 		1BB2148221DCF3B2007E3E3C /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				1B1CD2A1221CEFA50077B6A3 /* opengl */,
 				1B2F127921FDB7CB0092D461 /* media */,
 				1B20F6D221E64161004756FD /* item */,
 				1B44D1CC2163B1EF00C0F563 /* TableViewController.h */,
@@ -1057,7 +1123,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1C6FA92222685F0078CE6C /* OpenGlVertexShader.glsl in Resources */,
 				1B09AE9B21AD96FB0017D6F6 /* RedViewController.xib in Resources */,
+				1B1CD2A8221E8F480077B6A3 /* butterfly.png in Resources */,
 				1B2D8A9621E4F66100D28628 /* ImageLoaderViewController.xib in Resources */,
 				1B1CD28F22166D860077B6A3 /* AVPlayerTestViewController.xib in Resources */,
 				1B2F128321FDFD350092D461 /* gang_hao_yu_jian_ni.aac in Resources */,
@@ -1072,6 +1140,7 @@
 				1B09B23D21B3F166000C7514 /* AnimationViewController.xib in Resources */,
 				1B44D1D62163B1F000C0F563 /* LaunchScreen.storyboard in Resources */,
 				1B0A023C21B01BBE000F2553 /* MyTabBarViewController.xib in Resources */,
+				1B1C6FAB222268950078CE6C /* OpenGlRGBFragmentShader.glsl in Resources */,
 				1B20F6DB21E64B1F004756FD /* MyCollectionViewCell.xib in Resources */,
 				1B44D1D32163B1F000C0F563 /* Assets.xcassets in Resources */,
 				1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */,
@@ -1082,6 +1151,7 @@
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
 				1B1CD299221A5C6A0077B6A3 /* ThreadTestViewController.xib in Resources */,
+				1B1CD2A6221E84500077B6A3 /* scenery.jpg in Resources */,
 				1BBBB9032215BF56000ED53E /* FFmpegTestViewController.xib in Resources */,
 				1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */,
 				1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */,
@@ -1189,6 +1259,7 @@
 				1B2F126C21F99A720092D461 /* User.m in Sources */,
 				1B2F127321F9A8200092D461 /* VideoListItemModel.m in Sources */,
 				1B0A023B21B01BBE000F2553 /* MyTabBarViewController.m in Sources */,
+				1B1C6F9C222129FA0078CE6C /* ZQPlayerFrame.m in Sources */,
 				1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */,
 				1B0DE7AE21932F27006221B7 /* People.m in Sources */,
 				1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */,
@@ -1204,9 +1275,11 @@
 				1B95B46021E1FA8500F8359D /* HomeTabBarViewController.m in Sources */,
 				1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */,
 				1B1A5D5821F443A300BCB8E5 /* ConstraintTestViewController.m in Sources */,
+				1B1C6FA022212A990078CE6C /* ZQPlayerFrameVideo.m in Sources */,
 				1B27C88221EE2CE20073F27A /* WMLoopView.m in Sources */,
 				1B22AF2B21EB39C500557E54 /* YellowViewController.m in Sources */,
 				1B44D1D92163B1F000C0F563 /* main.m in Sources */,
+				1B1C6FA6222261700078CE6C /* GlShowPhotoViewController.m in Sources */,
 				1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */,
 				1B95B45521E1E17A00F8359D /* UIWindow+Toast.m in Sources */,
 				1B20F6DE21E64BA2004756FD /* MyCollectionViewCell.m in Sources */,
@@ -1226,10 +1299,13 @@
 				1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */,
 				1B20F6D621E64626004756FD /* CollectionViewViewController.m in Sources */,
 				1BBBB9022215BF56000ED53E /* FFmpegTestViewController.m in Sources */,
+				1B1CD2A4221E534F0077B6A3 /* ShowPhotoViewController.m in Sources */,
+				1B1CD2AB221EB3950077B6A3 /* PlayerVideoViewController.m in Sources */,
 				1B1CD28E22166D860077B6A3 /* AVPlayerTestViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
 				1B09AE9A21AD96FB0017D6F6 /* RedViewController.m in Sources */,
 				1B95B45921E1E71100F8359D /* ToastViewController.m in Sources */,
+				1B1C6FA322212C240078CE6C /* ZQPlayerFrameVideoRGB.m in Sources */,
 				1B2F127D21FDB87B0092D461 /* AudioViewController.m in Sources */,
 				1BFD5F072182101700C1829D /* SplashDemoViewController.m in Sources */,
 			);
