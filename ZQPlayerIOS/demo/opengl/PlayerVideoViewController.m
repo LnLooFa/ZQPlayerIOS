@@ -166,9 +166,9 @@ static BOOL S_IS_PlAYING;
 //            if (!isYUV) {
                 NSLog(@"非YUV 数据要进行转换");
                 vswsframe = av_frame_alloc();
-                ret = av_image_alloc(vswsframe->data, vswsframe->linesize, videoCodeCtx->width, videoCodeCtx->height, AV_PIX_FMT_RGB24, 1);
+                ret = av_image_alloc(vswsframe->data, vswsframe->linesize, videoCodeCtx->width, videoCodeCtx->height, AV_PIX_FMT_RGBA, 1);
                 swsctx = sws_getContext(videoCodeCtx->width, videoCodeCtx->height, videoCodeCtx->pix_fmt,
-                                        videoCodeCtx->width, videoCodeCtx->height, AV_PIX_FMT_RGB24,
+                                        videoCodeCtx->width, videoCodeCtx->height, AV_PIX_FMT_RGBA,
                                         SWS_BILINEAR, NULL, NULL, NULL);
 //            }
             //获得fps，时间基， 用于同步

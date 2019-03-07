@@ -13,7 +13,7 @@
     self = [super init];
     if (self) {
         self.type = ZQPlayerFrameTypeVideo;
-        self.format = GL_RGB;
+        self.format = GL_RGBA;
     }
     return self;
 }
