@@ -24,6 +24,12 @@
 		1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B182B1C21DB0DBA0085E5F3 /* NetWorkViewController.m */; };
 		1B182B1F21DB0DBA0085E5F3 /* NetWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */; };
 		1B1A5D5821F443A300BCB8E5 /* ConstraintTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */; };
+		1B1CD28E22166D860077B6A3 /* AVPlayerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD28C22166D860077B6A3 /* AVPlayerTestViewController.m */; };
+		1B1CD28F22166D860077B6A3 /* AVPlayerTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD28D22166D860077B6A3 /* AVPlayerTestViewController.xib */; };
+		1B1CD29322199ABA0077B6A3 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD29122199ABA0077B6A3 /* ImagePickerViewController.m */; };
+		1B1CD29422199ABA0077B6A3 /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD29222199ABA0077B6A3 /* ImagePickerViewController.xib */; };
+		1B1CD297221A5C070077B6A3 /* ThreadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CD296221A5C070077B6A3 /* ThreadTestViewController.m */; };
+		1B1CD299221A5C6A0077B6A3 /* ThreadTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CD298221A5C6A0077B6A3 /* ThreadTestViewController.xib */; };
 		1B200B6921FF49D600FA5816 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B200B6821FF49D600FA5816 /* VideoViewController.m */; };
 		1B200B6B21FF4A5C00FA5816 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B200B6A21FF4A5C00FA5816 /* MediaPlayer.framework */; };
 		1B200B6D21FF552900FA5816 /* gao_bai_qi_qiu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B200B6C21FF552900FA5816 /* gao_bai_qi_qiu.mp4 */; };
@@ -144,6 +150,15 @@
 		1B182B1D21DB0DBA0085E5F3 /* NetWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetWorkViewController.xib; sourceTree = "<group>"; };
 		1B1A5D5621F443A300BCB8E5 /* ConstraintTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstraintTestViewController.h; sourceTree = "<group>"; };
 		1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstraintTestViewController.m; sourceTree = "<group>"; };
+		1B1CD28B22166D860077B6A3 /* AVPlayerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerTestViewController.h; sourceTree = "<group>"; };
+		1B1CD28C22166D860077B6A3 /* AVPlayerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerTestViewController.m; sourceTree = "<group>"; };
+		1B1CD28D22166D860077B6A3 /* AVPlayerTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AVPlayerTestViewController.xib; sourceTree = "<group>"; };
+		1B1CD29022199ABA0077B6A3 /* ImagePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		1B1CD29122199ABA0077B6A3 /* ImagePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		1B1CD29222199ABA0077B6A3 /* ImagePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePickerViewController.xib; sourceTree = "<group>"; };
+		1B1CD295221A5C070077B6A3 /* ThreadTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTestViewController.h; sourceTree = "<group>"; };
+		1B1CD296221A5C070077B6A3 /* ThreadTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTestViewController.m; sourceTree = "<group>"; };
+		1B1CD298221A5C6A0077B6A3 /* ThreadTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreadTestViewController.xib; sourceTree = "<group>"; };
 		1B200B6721FF49D600FA5816 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		1B200B6821FF49D600FA5816 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		1B200B6A21FF4A5C00FA5816 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -503,6 +518,9 @@
 				1B22AF2A21EB39C500557E54 /* YellowViewController.m */,
 				1B1A5D5621F443A300BCB8E5 /* ConstraintTestViewController.h */,
 				1B1A5D5721F443A300BCB8E5 /* ConstraintTestViewController.m */,
+				1B1CD295221A5C070077B6A3 /* ThreadTestViewController.h */,
+				1B1CD296221A5C070077B6A3 /* ThreadTestViewController.m */,
+				1B1CD298221A5C6A0077B6A3 /* ThreadTestViewController.xib */,
 			);
 			path = item;
 			sourceTree = "<group>";
@@ -559,6 +577,12 @@
 				1BBBB8FF2215BF56000ED53E /* FFmpegTestViewController.h */,
 				1BBBB9002215BF56000ED53E /* FFmpegTestViewController.m */,
 				1BBBB9012215BF56000ED53E /* FFmpegTestViewController.xib */,
+				1B1CD28B22166D860077B6A3 /* AVPlayerTestViewController.h */,
+				1B1CD28C22166D860077B6A3 /* AVPlayerTestViewController.m */,
+				1B1CD28D22166D860077B6A3 /* AVPlayerTestViewController.xib */,
+				1B1CD29022199ABA0077B6A3 /* ImagePickerViewController.h */,
+				1B1CD29122199ABA0077B6A3 /* ImagePickerViewController.m */,
+				1B1CD29222199ABA0077B6A3 /* ImagePickerViewController.xib */,
 			);
 			path = media;
 			sourceTree = "<group>";
@@ -1035,6 +1059,7 @@
 			files = (
 				1B09AE9B21AD96FB0017D6F6 /* RedViewController.xib in Resources */,
 				1B2D8A9621E4F66100D28628 /* ImageLoaderViewController.xib in Resources */,
+				1B1CD28F22166D860077B6A3 /* AVPlayerTestViewController.xib in Resources */,
 				1B2F128321FDFD350092D461 /* gang_hao_yu_jian_ni.aac in Resources */,
 				1B20F6D721E64626004756FD /* CollectionViewViewController.xib in Resources */,
 				1BB7884B218FE386000D28E5 /* NSUserDefaultsViewController.xib in Resources */,
@@ -1051,10 +1076,12 @@
 				1B44D1D32163B1F000C0F563 /* Assets.xcassets in Resources */,
 				1B0E2FD021AC2ACA00B1389C /* TabBarViewController.xib in Resources */,
 				1B2F128721FE04670092D461 /* gang_hao_yu_jian_ni.mp3 in Resources */,
+				1B1CD29422199ABA0077B6A3 /* ImagePickerViewController.xib in Resources */,
 				1B20F6D121E640CC004756FD /* HorizontalTableViewController.xib in Resources */,
 				1B95B45A21E1E71100F8359D /* ToastViewController.xib in Resources */,
 				1B09AEA021AD973F0017D6F6 /* GreenViewController.xib in Resources */,
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
+				1B1CD299221A5C6A0077B6A3 /* ThreadTestViewController.xib in Resources */,
 				1BBBB9032215BF56000ED53E /* FFmpegTestViewController.xib in Resources */,
 				1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */,
 				1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */,
@@ -1171,7 +1198,9 @@
 				1B22AF2821EB120100557E54 /* UiTools.m in Sources */,
 				1B20F6D021E640CC004756FD /* HorizontalTableViewController.m in Sources */,
 				1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */,
+				1B1CD297221A5C070077B6A3 /* ThreadTestViewController.m in Sources */,
 				1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */,
+				1B1CD29322199ABA0077B6A3 /* ImagePickerViewController.m in Sources */,
 				1B95B46021E1FA8500F8359D /* HomeTabBarViewController.m in Sources */,
 				1B0A7E76217C0C15001FE450 /* TableViewAdapter.m in Sources */,
 				1B1A5D5821F443A300BCB8E5 /* ConstraintTestViewController.m in Sources */,
@@ -1197,6 +1226,7 @@
 				1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */,
 				1B20F6D621E64626004756FD /* CollectionViewViewController.m in Sources */,
 				1BBBB9022215BF56000ED53E /* FFmpegTestViewController.m in Sources */,
+				1B1CD28E22166D860077B6A3 /* AVPlayerTestViewController.m in Sources */,
 				1B0A7E79217C188A001FE450 /* ActionItemBean.m in Sources */,
 				1B09AE9A21AD96FB0017D6F6 /* RedViewController.m in Sources */,
 				1B95B45921E1E71100F8359D /* ToastViewController.m in Sources */,

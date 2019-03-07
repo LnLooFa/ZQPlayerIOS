@@ -64,8 +64,8 @@
  */
 -(MPMoviePlayerController *)moviePlayer{
     if (!_moviePlayer) {
-        NSURL *url=[self getNetworkUrl];
-//        NSURL *url=[self getFileUrl];
+//        NSURL *url=[self getNetworkUrl];
+        NSURL *url=[self getFileUrl];
         _moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:url];
         _moviePlayer.view.frame=self.view.bounds;
         _moviePlayer.view.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
@@ -83,6 +83,8 @@
     [notificationCenter addObserver:self selector:@selector(mediaPlayerPlaybackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
     
 }
+
+
 
 /**
  *  播放状态改变，注意播放完成时的状态是暂停

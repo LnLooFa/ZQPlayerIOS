@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AVPlayerTestViewController">
+            <connections>
+                <outlet property="container" destination="riJ-k9-LZe" id="lhx-CC-a2i"/>
+                <outlet property="playOrPause" destination="55E-7R-SU1" id="70m-j1-n85"/>
+                <outlet property="progress" destination="tDn-eq-HtF" id="tRf-OR-0Sv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-k9-LZe">
+                    <rect key="frame" x="0.0" y="20" width="375" height="186"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tDn-eq-HtF">
+                    <rect key="frame" x="16" y="234" width="343" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="kGD-HG-7Pf"/>
+                    </constraints>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55E-7R-SU1">
+                    <rect key="frame" x="16" y="253" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="KiC-WU-2FM"/>
+                        <constraint firstAttribute="width" constant="35" id="sNY-7k-iC7"/>
+                    </constraints>
+                    <state key="normal" image="icon_play"/>
+                    <connections>
+                        <action selector="playClick:" destination="-1" eventType="touchUpInside" id="D7m-ID-Yij"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tDn-eq-HtF" firstAttribute="centerX" secondItem="riJ-k9-LZe" secondAttribute="centerX" id="CDt-Ym-UE1"/>
+                <constraint firstItem="tDn-eq-HtF" firstAttribute="top" secondItem="riJ-k9-LZe" secondAttribute="bottom" constant="28" id="Etg-c7-anF"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="riJ-k9-LZe" secondAttribute="bottom" constant="461" id="WhD-8Y-BVo"/>
+                <constraint firstAttribute="trailing" secondItem="riJ-k9-LZe" secondAttribute="trailing" id="YLo-hi-ReK"/>
+                <constraint firstItem="tDn-eq-HtF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Ze2-DQ-E2j"/>
+                <constraint firstItem="riJ-k9-LZe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aoG-dc-cje"/>
+                <constraint firstItem="riJ-k9-LZe" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="byO-KV-X4g"/>
+                <constraint firstItem="55E-7R-SU1" firstAttribute="top" secondItem="tDn-eq-HtF" secondAttribute="bottom" constant="17" id="f5G-th-Rof"/>
+                <constraint firstItem="tDn-eq-HtF" firstAttribute="leading" secondItem="55E-7R-SU1" secondAttribute="leading" id="hG3-hb-yyt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="27" y="127"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_play" width="100" height="100"/>
+    </resources>
+</document>
