@@ -1,17 +1,17 @@
 //
-//  GlShowPhotoViewController.m
+//  OpenGlView.m
 //  ZQPlayerIOS
 //
-//  Created by johnwu on 2019/2/24.
+//  Created by johnwu on 2019/3/6.
 //  Copyright © 2019年 johnwu. All rights reserved.
 //
 
-#import "GlShowPhotoViewController.h"
+#import "OpenGlView.h"
 #import "OpenGlUtils.h"
+
 #define VERTEX_ATTRIBUTE_POSITION   0
 #define VERTEX_ATTRIBUTE_TEXCOORD   1
-
-@interface GlShowPhotoViewController (){
+@interface OpenGlView (){
     GLfloat _vec4Position[8];
     GLfloat _vec2Texcoord[8];
     GLfloat _mat4Projection[16];
@@ -29,26 +29,22 @@
     GLuint _texture;
     GLint _sampler;
 }
-
 @end
 
-@implementation GlShowPhotoViewController
+@implementation OpenGlView
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
-   
-    
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        if (![self initVars]) {
+            self = nil;
+            return nil;
+        }
+    }
+    return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-     [self initVars];
-}
-
-
-- (void)initVars {
+- (BOOL)initVars {
     _vec4Position[0] = -1; _vec4Position[1] = -1;
     _vec4Position[2] =  1; _vec4Position[3] = -1;
     _vec4Position[4] = -1; _vec4Position[5] =  1;
@@ -67,7 +63,7 @@
         _mat4Projection[i * 5] = 0;
     }
     
-    _eaglLayer = (CAEAGLLayer *)self.view.layer;
+    _eaglLayer = (CAEAGLLayer *)self.layer;
     _eaglLayer.opaque = YES;
     
     _context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
@@ -96,7 +92,7 @@
     GLuint program = glCreateProgram();
     if (program == 0) {
         NSLog(@"create program.错误 ");
-        return;
+        return NO;
     }
     
     // 生成着色器 Load shaders
@@ -112,7 +108,7 @@
     // 绑定 ：将glsl文件代码中的变量 绑定到 常量上，也可以用 GLES20.glGetAttribLocation 动态获取
     glBindAttribLocation(program, VERTEX_ATTRIBUTE_POSITION, "position");
     glBindAttribLocation(program, VERTEX_ATTRIBUTE_TEXCOORD, "texcoord");
-//    _projectionSlot = glGetUniformLocation(program, "projection");
+    //    _projectionSlot = glGetUniformLocation(program, "projection");
     
     // 链接 Link program
     glLinkProgram(program);
@@ -131,20 +127,23 @@
         }
         
         glDeleteProgram(program);
-        return;
+        return NO;
     }
     
     // 应用 程序代码
     glUseProgram(program);
     
     _programHandle = program;
+    //    [self render];
     
-    [self render];
+    return YES;
+
     
 }
 
+
 //渲染
-- (void)render {
+- (void)render:(ZQPlayerFrameVideo *)frame {
     glClearColor(0, 0, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT);
     
@@ -154,22 +153,17 @@
     // Set frame 字节对齐
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     
-    glGenTextures(1, &_texture);
+    if (_texture == 0) {
+        glGenTextures(1, &_texture);
+    }
     
     if (_texture == 0) {
         NSLog(@"glGenTextures 错误");
+        return;
     };
     //绑定纹理 到 GL_TEXTURE_2D  之后 对 GL_TEXTURE_2D的操作会应用到_texture
     glBindTexture(GL_TEXTURE_2D, _texture);
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"scenery" ofType:@"jpg"];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    NSLog(@"image.size.width = %f, image.size.height = %f", image.size.width, image.size.height);
-    
-    GLubyte* imageData = malloc(image.size.width * image.size.height * 4);
-    CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRGB(), kCGImageAlphaPremultipliedLast);
-    CGContextDrawImage(imageContext, CGRectMake(0.0, 0.0, image.size.width, image.size.height), image.CGImage);
-    CGContextRelease(imageContext);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.size.width, image.size.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
+    glTexImage2D(GL_TEXTURE_2D, 0, frame.format, frame.width, frame.height, 0, frame.format, GL_UNSIGNED_BYTE, frame.data.bytes);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -185,7 +179,7 @@
     glUniform1i(_sampler, 0);
     
     
-//    glUniformMatrix4fv(_projectionSlot, 1, GL_FALSE, _mat4Projection);
+    //    glUniformMatrix4fv(_projectionSlot, 1, GL_FALSE, _mat4Projection);
     glVertexAttribPointer(VERTEX_ATTRIBUTE_POSITION, 2, GL_FLOAT, GL_FALSE, 0, _vec4Position);
     glEnableVertexAttribArray(VERTEX_ATTRIBUTE_POSITION);
     glVertexAttribPointer(VERTEX_ATTRIBUTE_TEXCOORD, 2, GL_FLOAT, GL_FALSE, 0, _vec2Texcoord);
@@ -196,13 +190,5 @@
     [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

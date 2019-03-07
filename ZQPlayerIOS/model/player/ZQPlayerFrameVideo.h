@@ -10,4 +10,5 @@
 @interface ZQPlayerFrameVideo : ZQPlayerFrame
 @property (nonatomic) int width;
 @property (nonatomic) int height;
+@property (nonatomic) GLint format;
 @end

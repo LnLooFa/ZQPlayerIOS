@@ -7,12 +7,13 @@
 //
 
 #import "ZQPlayerFrameVideo.h"
-
+#import <GLKit/GLKit.h>
 @implementation ZQPlayerFrameVideo
 - (id)init {
     self = [super init];
     if (self) {
         self.type = ZQPlayerFrameTypeVideo;
+        self.format = GL_RGB;
     }
     return self;
 }

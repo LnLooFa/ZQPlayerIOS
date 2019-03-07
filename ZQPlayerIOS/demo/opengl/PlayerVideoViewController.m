@@ -13,6 +13,7 @@
 #import <libavutil/eval.h>
 #import <libavutil/display.h>
 #import "ZQPlayerFrameVideoRGB.h"
+#import "OpenGlView.h"
 
 static BOOL S_IS_PlAYING;
 @interface PlayerVideoViewController (){
@@ -32,7 +33,6 @@ static BOOL S_IS_PlAYING;
     
     BOOL mIsPlaying;
     NSThread *mFrameReaderThread;
-    dispatch_block_t renderFrameBlock;
     BOOL mIsEOF;
     
     //缓存判断
@@ -41,6 +41,8 @@ static BOOL S_IS_PlAYING;
     double mBufferedDuration;//当前缓存
     
     NSMutableArray *vframes;
+    OpenGlView* openGlView;
+    dispatch_semaphore_t vFramesLock;
 }
 
 @end
@@ -58,12 +60,15 @@ static BOOL S_IS_PlAYING;
         mMaxBufferDuration = 5;
         mBufferedDuration = 0;
         vframes = [NSMutableArray arrayWithCapacity:128];
+        vFramesLock = dispatch_semaphore_create(1);
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    openGlView = [[OpenGlView alloc] initWithFrame:CGRectMake(100,100,200,200)];
+    [self.view addSubview:openGlView];
     [self initPlayer];
 }
 
@@ -72,9 +77,6 @@ static BOOL S_IS_PlAYING;
     mIsPlaying = FALSE;
     if(mFrameReaderThread != nil){
         mFrameReaderThread = nil;
-    }
-    if(renderFrameBlock != nil){
-        renderFrameBlock = nil;
     }
 }
 
@@ -104,19 +106,10 @@ static BOOL S_IS_PlAYING;
         //解码线程
         NSLog(@"readFrameRunnable %@", S_IS_PlAYING?@"YES":@"NO");
         [strongSelf startFrameReaderThread];
-        //渲染线程
-        strongSelf->renderFrameBlock = dispatch_block_create(0, ^{
-            while (strongSelf->mIsPlaying) {
-                if(self->vframes.count > 0 && !self->mIsEOF){
-                    
-                }else{
-                    NSLog(@"render sleep");
-                    [NSThread sleepForTimeInterval:1];
-                }
-            }
+        //渲染
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [strongSelf render];
         });
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), strongSelf->renderFrameBlock);
-        
         
     });
 }
@@ -227,6 +220,7 @@ static BOOL S_IS_PlAYING;
     return YES;
 }
 
+
 - (void)startFrameReaderThread {
     
     if (mFrameReaderThread == nil) {
@@ -240,26 +234,36 @@ static BOOL S_IS_PlAYING;
         dispatch_time_t t = dispatch_time(DISPATCH_TIME_NOW, 0.02 * NSEC_PER_SEC);
         NSDate *datenow;
         while (self->mIsPlaying && !self->mIsEOF) {
-            datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
-            NSLog(@"readFrameRunnable %ld %f %llu", (long)[datenow timeIntervalSince1970] , 0.02 * NSEC_PER_SEC, t);
             //读取音视频帧
             NSArray *fs = [self readFrames];
             if (fs == nil) { break; }
             if (fs.count == 0) { continue; }
-            NSLog(@"ziq readFrames size = %lu", (unsigned long)fs.count);
-            
+            NSLog(@"ziq 读取 Frames size = %lu, \n%@", (unsigned long)fs.count, fs);
             for (ZQPlayerFrame *f in fs) {
                 if (f.type == ZQPlayerFrameTypeVideo) {
                     [self->vframes addObject:f];
                 }
             }
-            [NSThread sleepForTimeInterval:1];
+            [NSThread sleepForTimeInterval:0.04];
         }
         mFrameReaderThread = nil;
     }
 }
 
-
+- (void)render {
+    if(self->vframes.count > 0 && !self->mIsEOF){
+        NSLog(@"ziq 渲染 frame size = %lu", (unsigned long)self->vframes.count);
+        ZQPlayerFrameVideoRGB *frame = self->vframes[0];
+        [self->vframes removeObjectAtIndex:0];
+        
+        [self->openGlView render:frame];
+        
+        __weak typeof(self)weakSelf = self;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.04 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf render];
+        });
+    }
+}
 
 
 //初始化 编码器上下文
@@ -314,9 +318,7 @@ static BOOL S_IS_PlAYING;
         
         NSArray<ZQPlayerFrame *> *fs = nil;
         if (packet.stream_index == self->mVideoStreamIndex) {
-            NSLog(@"ziq handleVideoPacket----------");
             fs = [self handleVideoPacket:&packet byContext:self->mVideoCodecContext andFrame:self->mVideoFrame andSwsContext:self->mVideoSwsContext andSwsFrame:self->mVideoSwsFrame];
-            NSLog(@"ziq video frame size = %lu", (unsigned long)fs.count);
             reading = NO;
         }
         
@@ -328,8 +330,6 @@ static BOOL S_IS_PlAYING;
 
 
 - (NSArray<ZQPlayerFrameVideo *> *)handleVideoPacket:(AVPacket *)packet byContext:(AVCodecContext *)context andFrame:(AVFrame *)frame andSwsContext:(struct SwsContext *)swsctx andSwsFrame:(AVFrame *)swsframe {
-    
-    NSLog(@"ziq handleVideoPacket avcodec_send_packet");
     int ret = avcodec_send_packet(context, packet);
     if (ret != 0) { NSLog(@"avcodec_send_packet: %d", ret); return nil; }
     NSMutableArray<ZQPlayerFrameVideo *> *frames = [NSMutableArray array];
@@ -337,7 +337,6 @@ static BOOL S_IS_PlAYING;
     const int height = context->height;
     do {
         ZQPlayerFrameVideo *f = nil;
-        NSLog(@"ziq handleVideoPacket avcodec_receive_frame do ");
         ret = avcodec_receive_frame(context, frame);
         if (ret == AVERROR_EOF || ret == AVERROR(EAGAIN)){
             break;
@@ -368,7 +367,6 @@ static BOOL S_IS_PlAYING;
         } else {
             f.duration = 1 / self->mVideoFPS;
         }
-        NSLog(@"video frame: %@", f);
         [frames addObject:f];
     } while(ret == 0);
     return frames;

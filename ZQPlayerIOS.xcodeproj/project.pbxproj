@@ -107,6 +107,9 @@
 		1BBBB8FE2215BE55000ED53E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8FD2215BE55000ED53E /* AudioToolbox.framework */; };
 		1BBBB9022215BF56000ED53E /* FFmpegTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBB9002215BF56000ED53E /* FFmpegTestViewController.m */; };
 		1BBBB9032215BF56000ED53E /* FFmpegTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBB9012215BF56000ED53E /* FFmpegTestViewController.xib */; };
+		1BE9BA76222FC85700B7D3E8 /* OpenGlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA75222FC85700B7D3E8 /* OpenGlView.m */; };
+		1BE9BA79222FC9EB00B7D3E8 /* OpenGlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */; };
+		1BE9BA7C222FCCAE00B7D3E8 /* GlViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA7B222FCCAE00B7D3E8 /* GlViewTestViewController.m */; };
 		1BFD5F072182101700C1829D /* SplashDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD5F052182101700C1829D /* SplashDemoViewController.m */; };
 		1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD5F062182101700C1829D /* SplashDemoViewController.xib */; };
 		91A9CFDC63ED1D10960FD376 /* libPods-ZQPlayerIOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2B9A9AE51F366F381AAC0C /* libPods-ZQPlayerIOSUITests.a */; };
@@ -402,6 +405,12 @@
 		1BBBB8FF2215BF56000ED53E /* FFmpegTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegTestViewController.h; sourceTree = "<group>"; };
 		1BBBB9002215BF56000ED53E /* FFmpegTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegTestViewController.m; sourceTree = "<group>"; };
 		1BBBB9012215BF56000ED53E /* FFmpegTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFmpegTestViewController.xib; sourceTree = "<group>"; };
+		1BE9BA74222FC85700B7D3E8 /* OpenGlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGlView.h; sourceTree = "<group>"; };
+		1BE9BA75222FC85700B7D3E8 /* OpenGlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGlView.m; sourceTree = "<group>"; };
+		1BE9BA77222FC9EB00B7D3E8 /* OpenGlUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGlUtils.h; sourceTree = "<group>"; };
+		1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGlUtils.m; sourceTree = "<group>"; };
+		1BE9BA7A222FCCAE00B7D3E8 /* GlViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlViewTestViewController.h; sourceTree = "<group>"; };
+		1BE9BA7B222FCCAE00B7D3E8 /* GlViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlViewTestViewController.m; sourceTree = "<group>"; };
 		1BFD5F042182101700C1829D /* SplashDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashDemoViewController.h; sourceTree = "<group>"; };
 		1BFD5F052182101700C1829D /* SplashDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashDemoViewController.m; sourceTree = "<group>"; };
 		1BFD5F062182101700C1829D /* SplashDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashDemoViewController.xib; sourceTree = "<group>"; };
@@ -524,6 +533,10 @@
 				1B1CD2AA221EB3950077B6A3 /* PlayerVideoViewController.m */,
 				1B1C6FA4222261700078CE6C /* GlShowPhotoViewController.h */,
 				1B1C6FA5222261700078CE6C /* GlShowPhotoViewController.m */,
+				1BE9BA74222FC85700B7D3E8 /* OpenGlView.h */,
+				1BE9BA75222FC85700B7D3E8 /* OpenGlView.m */,
+				1BE9BA7A222FCCAE00B7D3E8 /* GlViewTestViewController.h */,
+				1BE9BA7B222FCCAE00B7D3E8 /* GlViewTestViewController.m */,
 			);
 			path = opengl;
 			sourceTree = "<group>";
@@ -593,6 +606,8 @@
 				1B22AEE521EAD77F00557E54 /* UtilsMacro.h */,
 				1B22AF2621EB120000557E54 /* UiTools.h */,
 				1B22AF2721EB120000557E54 /* UiTools.m */,
+				1BE9BA77222FC9EB00B7D3E8 /* OpenGlUtils.h */,
+				1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -1266,9 +1281,11 @@
 				1B95B47721E2474B00F8359D /* AmusementViewController.m in Sources */,
 				1B95B47C21E2475F00F8359D /* SubscribeViewController.m in Sources */,
 				1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */,
+				1BE9BA76222FC85700B7D3E8 /* OpenGlView.m in Sources */,
 				1B22AF2821EB120100557E54 /* UiTools.m in Sources */,
 				1B20F6D021E640CC004756FD /* HorizontalTableViewController.m in Sources */,
 				1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */,
+				1BE9BA79222FC9EB00B7D3E8 /* OpenGlUtils.m in Sources */,
 				1B1CD297221A5C070077B6A3 /* ThreadTestViewController.m in Sources */,
 				1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */,
 				1B1CD29322199ABA0077B6A3 /* ImagePickerViewController.m in Sources */,
@@ -1291,6 +1308,7 @@
 				1B95B48121E2477200F8359D /* DiscoverViewController.m in Sources */,
 				1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */,
 				1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */,
+				1BE9BA7C222FCCAE00B7D3E8 /* GlViewTestViewController.m in Sources */,
 				1B182B1E21DB0DBA0085E5F3 /* NetWorkViewController.m in Sources */,
 				1B09AE9F21AD973F0017D6F6 /* GreenViewController.m in Sources */,
 				1B200B6921FF49D600FA5816 /* VideoViewController.m in Sources */,

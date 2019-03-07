@@ -14,7 +14,7 @@
 -(NSString*) description
 {
     //返回一个字符串
-    return [NSString stringWithFormat:@"height：%d, width：%d, position: %f, duration: %f, linesize: %lu",
+    return [NSString stringWithFormat:@"height:%d, width:%d, position:%f, duration:%f, linesize:%lu",
             self.height,self.width,self.position,self.duration,(unsigned long)self.linesize];
 }
 
