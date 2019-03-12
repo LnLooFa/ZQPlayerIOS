@@ -71,6 +71,8 @@
 		1B2F128521FDFFA40092D461 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2F128421FDFFA40092D461 /* AVFoundation.framework */; };
 		1B2F128721FE04670092D461 /* gang_hao_yu_jian_ni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B2F128621FE04670092D461 /* gang_hao_yu_jian_ni.mp3 */; };
 		1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */; };
+		1B397D332235246E004A6918 /* Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B397D322235246E004A6918 /* Decoder.m */; };
+		1B397D362236448C004A6918 /* ZQPlayerFrameAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B397D352236448C004A6918 /* ZQPlayerFrameAudio.m */; };
 		1B3BE6D421EF5FF200D96A7C /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */; };
 		1B44D1CB2163B1EF00C0F563 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CA2163B1EF00C0F563 /* AppDelegate.m */; };
 		1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1CD2163B1EF00C0F563 /* TableViewController.m */; };
@@ -80,6 +82,7 @@
 		1B44D1D92163B1F000C0F563 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1D82163B1F000C0F563 /* main.m */; };
 		1B44D1E32163B1F000C0F563 /* ZQPlayerIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1E22163B1F000C0F563 /* ZQPlayerIOSTests.m */; };
 		1B44D1EE2163B1F000C0F563 /* ZQPlayerIOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B44D1ED2163B1F000C0F563 /* ZQPlayerIOSUITests.m */; };
+		1B5602312237C8C10063377D /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5602302237C8C10063377D /* libavcodec.a */; };
 		1B95B45521E1E17A00F8359D /* UIWindow+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B45421E1E17A00F8359D /* UIWindow+Toast.m */; };
 		1B95B45921E1E71100F8359D /* ToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B45721E1E71100F8359D /* ToastViewController.m */; };
 		1B95B45A21E1E71100F8359D /* ToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B95B45821E1E71100F8359D /* ToastViewController.xib */; };
@@ -89,6 +92,7 @@
 		1B95B47C21E2475F00F8359D /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B47A21E2475F00F8359D /* SubscribeViewController.m */; };
 		1B95B48121E2477200F8359D /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B47F21E2477200F8359D /* DiscoverViewController.m */; };
 		1B95B48621E2478500F8359D /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B95B48421E2478500F8359D /* MineViewController.m */; };
+		1BA9B1842233C0E000E3B448 /* AudioUnitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9B1832233C0E000E3B448 /* AudioUnitManager.m */; };
 		1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2148421DD0C51007E3E3C /* MainViewController.m */; };
 		1BB2149021DD1A80007E3E3C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2148F21DD1A80007E3E3C /* SplashViewController.m */; };
 		1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB78848218FE386000D28E5 /* NSUserDefaultsViewController.m */; };
@@ -104,8 +108,6 @@
 		1BBBB8FA2215BDE8000ED53E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8F92215BDE8000ED53E /* libiconv.tbd */; };
 		1BBBB8FC2215BE3B000ED53E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8FB2215BE3B000ED53E /* VideoToolbox.framework */; };
 		1BBBB8FE2215BE55000ED53E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBB8FD2215BE55000ED53E /* AudioToolbox.framework */; };
-		1BBBB9022215BF56000ED53E /* FFmpegTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBB9002215BF56000ED53E /* FFmpegTestViewController.m */; };
-		1BBBB9032215BF56000ED53E /* FFmpegTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBB9012215BF56000ED53E /* FFmpegTestViewController.xib */; };
 		1BE9BA76222FC85700B7D3E8 /* OpenGlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA75222FC85700B7D3E8 /* OpenGlView.m */; };
 		1BE9BA79222FC9EB00B7D3E8 /* OpenGlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */; };
 		1BE9BA7C222FCCAE00B7D3E8 /* GlViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA7B222FCCAE00B7D3E8 /* GlViewTestViewController.m */; };
@@ -235,6 +237,10 @@
 		1B2F128421FDFFA40092D461 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1B2F128621FE04670092D461 /* gang_hao_yu_jian_ni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gang_hao_yu_jian_ni.mp3; sourceTree = "<group>"; };
 		1B34D71021F8BCC700C6AA01 /* VideoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
+		1B397D312235246E004A6918 /* Decoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		1B397D322235246E004A6918 /* Decoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Decoder.m; sourceTree = "<group>"; };
+		1B397D342236448C004A6918 /* ZQPlayerFrameAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQPlayerFrameAudio.h; sourceTree = "<group>"; };
+		1B397D352236448C004A6918 /* ZQPlayerFrameAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQPlayerFrameAudio.m; sourceTree = "<group>"; };
 		1B3BE6D221EF5FF200D96A7C /* VideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
 		1B3BE6D321EF5FF200D96A7C /* VideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
 		1B44D1C62163B1EF00C0F563 /* ZQPlayerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQPlayerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +259,7 @@
 		1B44D1E92163B1F000C0F563 /* ZQPlayerIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZQPlayerIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B44D1ED2163B1F000C0F563 /* ZQPlayerIOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQPlayerIOSUITests.m; sourceTree = "<group>"; };
 		1B44D1EF2163B1F000C0F563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B5602302237C8C10063377D /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
 		1B95B45321E1E17A00F8359D /* UIWindow+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Toast.h"; sourceTree = "<group>"; };
 		1B95B45421E1E17A00F8359D /* UIWindow+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Toast.m"; sourceTree = "<group>"; };
 		1B95B45621E1E71100F8359D /* ToastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastViewController.h; sourceTree = "<group>"; };
@@ -271,6 +278,8 @@
 		1B95B47F21E2477200F8359D /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		1B95B48321E2478500F8359D /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		1B95B48421E2478500F8359D /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		1BA9B1822233C0E000E3B448 /* AudioUnitManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitManager.h; sourceTree = "<group>"; };
+		1BA9B1832233C0E000E3B448 /* AudioUnitManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitManager.m; sourceTree = "<group>"; };
 		1BB2148321DD0C51007E3E3C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1BB2148421DD0C51007E3E3C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1BB2148E21DD1A80007E3E3C /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
@@ -400,9 +409,6 @@
 		1BBBB8F92215BDE8000ED53E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		1BBBB8FB2215BE3B000ED53E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		1BBBB8FD2215BE55000ED53E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		1BBBB8FF2215BF56000ED53E /* FFmpegTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegTestViewController.h; sourceTree = "<group>"; };
-		1BBBB9002215BF56000ED53E /* FFmpegTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegTestViewController.m; sourceTree = "<group>"; };
-		1BBBB9012215BF56000ED53E /* FFmpegTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFmpegTestViewController.xib; sourceTree = "<group>"; };
 		1BE9BA74222FC85700B7D3E8 /* OpenGlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGlView.h; sourceTree = "<group>"; };
 		1BE9BA75222FC85700B7D3E8 /* OpenGlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGlView.m; sourceTree = "<group>"; };
 		1BE9BA77222FC9EB00B7D3E8 /* OpenGlUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGlUtils.h; sourceTree = "<group>"; };
@@ -429,6 +435,7 @@
 			files = (
 				1BBBB8FE2215BE55000ED53E /* AudioToolbox.framework in Frameworks */,
 				1BBBB8FC2215BE3B000ED53E /* VideoToolbox.framework in Frameworks */,
+				1B5602312237C8C10063377D /* libavcodec.a in Frameworks */,
 				1BBBB8FA2215BDE8000ED53E /* libiconv.tbd in Frameworks */,
 				1BBBB8F82215BDDA000ED53E /* libbz2.tbd in Frameworks */,
 				1BBBB8F62215BDC2000ED53E /* libz.tbd in Frameworks */,
@@ -508,6 +515,8 @@
 				1B1C6F9F22212A990078CE6C /* ZQPlayerFrameVideo.m */,
 				1B1C6FA122212C240078CE6C /* ZQPlayerFrameVideoRGB.h */,
 				1B1C6FA222212C240078CE6C /* ZQPlayerFrameVideoRGB.m */,
+				1B397D342236448C004A6918 /* ZQPlayerFrameAudio.h */,
+				1B397D352236448C004A6918 /* ZQPlayerFrameAudio.m */,
 			);
 			path = player;
 			sourceTree = "<group>";
@@ -600,11 +609,10 @@
 		1B22AEE421EAD76600557E54 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				1BA9B1812233C09A00E3B448 /* media */,
 				1B22AEE521EAD77F00557E54 /* UtilsMacro.h */,
 				1B22AF2621EB120000557E54 /* UiTools.h */,
 				1B22AF2721EB120000557E54 /* UiTools.m */,
-				1BE9BA77222FC9EB00B7D3E8 /* OpenGlUtils.h */,
-				1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -648,9 +656,6 @@
 				1B2F127C21FDB87B0092D461 /* AudioViewController.xib */,
 				1B200B6721FF49D600FA5816 /* VideoViewController.h */,
 				1B200B6821FF49D600FA5816 /* VideoViewController.m */,
-				1BBBB8FF2215BF56000ED53E /* FFmpegTestViewController.h */,
-				1BBBB9002215BF56000ED53E /* FFmpegTestViewController.m */,
-				1BBBB9012215BF56000ED53E /* FFmpegTestViewController.xib */,
 				1B1CD28B22166D860077B6A3 /* AVPlayerTestViewController.h */,
 				1B1CD28C22166D860077B6A3 /* AVPlayerTestViewController.m */,
 				1B1CD28D22166D860077B6A3 /* AVPlayerTestViewController.xib */,
@@ -778,6 +783,19 @@
 				1B95B48421E2478500F8359D /* MineViewController.m */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		1BA9B1812233C09A00E3B448 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				1BE9BA77222FC9EB00B7D3E8 /* OpenGlUtils.h */,
+				1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */,
+				1BA9B1822233C0E000E3B448 /* AudioUnitManager.h */,
+				1BA9B1832233C0E000E3B448 /* AudioUnitManager.m */,
+				1B397D312235246E004A6918 /* Decoder.h */,
+				1B397D322235246E004A6918 /* Decoder.m */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 		1BB2148221DCF3B2007E3E3C /* demo */ = {
@@ -987,6 +1005,7 @@
 		1BBBB8E62215BB99000ED53E /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				1B5602302237C8C10063377D /* libavcodec.a */,
 				1BBBB8E72215BB99000ED53E /* libavutil.a */,
 				1BBBB8E82215BB99000ED53E /* libavfilter.a */,
 				1BBBB8EA2215BB99000ED53E /* libavformat.a */,
@@ -1163,7 +1182,6 @@
 				1B27AF5721AAF2E300CB0033 /* ImageViewController.xib in Resources */,
 				1B1CD299221A5C6A0077B6A3 /* ThreadTestViewController.xib in Resources */,
 				1B1CD2A6221E84500077B6A3 /* scenery.jpg in Resources */,
-				1BBBB9032215BF56000ED53E /* FFmpegTestViewController.xib in Resources */,
 				1B34D71121F8BCC700C6AA01 /* VideoItemCell.xib in Resources */,
 				1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */,
 				1B44D1D12163B1EF00C0F563 /* Main.storyboard in Resources */,
@@ -1271,6 +1289,7 @@
 				1B2F127321F9A8200092D461 /* VideoListItemModel.m in Sources */,
 				1B0A023B21B01BBE000F2553 /* MyTabBarViewController.m in Sources */,
 				1B1C6F9C222129FA0078CE6C /* ZQPlayerFrame.m in Sources */,
+				1B397D362236448C004A6918 /* ZQPlayerFrameAudio.m in Sources */,
 				1B0E2FCF21AC2ACA00B1389C /* TabBarViewController.m in Sources */,
 				1B0DE7AE21932F27006221B7 /* People.m in Sources */,
 				1B44D1CE2163B1EF00C0F563 /* TableViewController.m in Sources */,
@@ -1293,6 +1312,7 @@
 				1B22AF2B21EB39C500557E54 /* YellowViewController.m in Sources */,
 				1B44D1D92163B1F000C0F563 /* main.m in Sources */,
 				1B1C6FA6222261700078CE6C /* GlShowPhotoViewController.m in Sources */,
+				1B397D332235246E004A6918 /* Decoder.m in Sources */,
 				1BB2148521DD0C51007E3E3C /* MainViewController.m in Sources */,
 				1B95B45521E1E17A00F8359D /* UIWindow+Toast.m in Sources */,
 				1B20F6DE21E64BA2004756FD /* MyCollectionViewCell.m in Sources */,
@@ -1301,6 +1321,7 @@
 				1B26034621ECD4CE00EEEA27 /* UIColor+Util.m in Sources */,
 				1BB7884A218FE386000D28E5 /* NSUserDefaultsViewController.m in Sources */,
 				1B95B48621E2478500F8359D /* MineViewController.m in Sources */,
+				1BA9B1842233C0E000E3B448 /* AudioUnitManager.m in Sources */,
 				1B95B48121E2477200F8359D /* DiscoverViewController.m in Sources */,
 				1B27AF5621AAF2E300CB0033 /* ImageViewController.m in Sources */,
 				1B09B23C21B3F166000C7514 /* AnimationViewController.m in Sources */,
@@ -1312,7 +1333,6 @@
 				1B2F127021F9A43F0092D461 /* NetworkingManager.m in Sources */,
 				1B95B46F21E2471900F8359D /* HomeViewController.m in Sources */,
 				1B20F6D621E64626004756FD /* CollectionViewViewController.m in Sources */,
-				1BBBB9022215BF56000ED53E /* FFmpegTestViewController.m in Sources */,
 				1B1CD2A4221E534F0077B6A3 /* ShowPhotoViewController.m in Sources */,
 				1B1CD2AB221EB3950077B6A3 /* PlayerVideoViewController.m in Sources */,
 				1B1CD28E22166D860077B6A3 /* AVPlayerTestViewController.m in Sources */,

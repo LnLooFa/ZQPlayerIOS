@@ -39,7 +39,6 @@ NSMutableArray *data;
     [data addObject:[[ActionItemBean alloc]initWith:@"布局约束测试" target:@"ConstraintTestViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"音频测试" target:@"AudioViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"视频测试" target:@"VideoViewController"]];
-    [data addObject:[[ActionItemBean alloc]initWith:@"FFmpeg测试" target:@"FFmpegTestViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"AVPlayer测试" target:@"AVPlayerTestViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"ImagePicker测试" target:@"ImagePickerViewController"]];
     [data addObject:[[ActionItemBean alloc]initWith:@"多线程测试" target:@"ThreadTestViewController"]];
