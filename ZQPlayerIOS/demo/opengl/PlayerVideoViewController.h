@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
-@interface PlayerVideoViewController : GLKViewController
+@interface PlayerVideoViewController : UIViewController
 
 @end

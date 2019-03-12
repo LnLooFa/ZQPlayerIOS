@@ -25,7 +25,6 @@ static BOOL S_IS_PlAYING;
     
     BOOL mIsPlaying;
     NSThread *mFrameReaderThread;
-    NSThread *mVideoFrameReaderThread;
     
     //缓存判断
     double mMinBufferDuration;
@@ -37,7 +36,6 @@ static BOOL S_IS_PlAYING;
     dispatch_semaphore_t vFramesLock;
     //audio
     NSMutableArray *aframes;
-    int audioReadCount;
     dispatch_semaphore_t aFramesLock;
     ZQPlayerFrameAudio *playingAudioFrame;
     
@@ -46,6 +44,8 @@ static BOOL S_IS_PlAYING;
     
     double mediaPosition;
 
+    double mediaSyncTime;
+    double mediaSyncPosition;
 }
 
 @end
@@ -56,7 +56,6 @@ static BOOL S_IS_PlAYING;
 {
     self = [super init];
     if (self) {
-        audioReadCount = 0;
         S_IS_PlAYING = NO;
         mIsPlaying = NO;
         mMinBufferDuration = 2;
@@ -77,7 +76,7 @@ static BOOL S_IS_PlAYING;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    openGlView = [[OpenGlView alloc] initWithFrame:CGRectMake(100,100,200,200)];
+    openGlView = [[OpenGlView alloc] initWithFrame:CGRectMake(0,0,320,180)];
     [self.view addSubview:openGlView];
     [self initPlayer];
 }
@@ -132,7 +131,6 @@ static BOOL S_IS_PlAYING;
         };
         [strongSelf->mAudioUnitManager play];
         //渲染视频
-//        [strongSelf startVideoFrameReaderThread];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [strongSelf render];
         });
@@ -158,16 +156,15 @@ static BOOL S_IS_PlAYING;
                 for (ZQPlayerFrame *f in fs) {
                     if (f.type == ZQPlayerFrameTypeVideo) {
                         [self->vframes addObject:f];
+                        self->mBufferedDuration += f.duration;//音频 同步
                     }else if (f.type == ZQPlayerFrameTypeAudio) {
                         [self->aframes addObject:f];
-                        self->mBufferedDuration += f.duration;//音频 同步
-                        audioReadCount++;
                     }
                 }
-                NSLog(@"ziq 读取 frame = %lu, readCount = %d aframes = %lu", (unsigned long)fs.count, audioReadCount, self->aframes.count);
+                NSLog(@"ziq 读取 frame = %lu, aframes = %lu", (unsigned long)fs.count, self->aframes.count);
             }else{
                 //空运转会耗费cpu
-                [NSThread sleepForTimeInterval:1];
+                [NSThread sleepForTimeInterval:1.5];
             }
         }
         mFrameReaderThread = nil;
@@ -175,78 +172,58 @@ static BOOL S_IS_PlAYING;
 }
 
 
-- (void)startVideoFrameReaderThread {
-    if (mVideoFrameReaderThread == nil) {
-        mVideoFrameReaderThread = [[NSThread alloc] initWithTarget:self selector:@selector(renderVideoFrameRunnable) object:nil];
-        [mVideoFrameReaderThread start];
-    }
-}
-
--(void)renderVideoFrameRunnable{
-    @autoreleasepool {
-        while (self->mIsPlaying) {
-            if(self->vframes.count > 0){
-                NSLog(@"ziq 渲染视频 vframe size = %lu", (unsigned long)self->vframes.count);
-                ZQPlayerFrameVideoRGB *frame = self->vframes[0];
-                [self->vframes removeObjectAtIndex:0];
-                NSLog(@"ziq1 渲染视频----");
-                __weak typeof(self)weakSelf = self;
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    __strong typeof(weakSelf)strongSelf = weakSelf;
-                    if (!strongSelf) {
-                        return;
-                    }
-                    [strongSelf->openGlView render:frame];
-                });
-                
-                ZQPlayerFrameVideoRGB *nextFrame = self->vframes[0];
-                double tempMediaPosition = self->mediaPosition;
-                const double dt = nextFrame.position - tempMediaPosition;
-                
-                NSTimeInterval t = 0;
-                if (dt > 0) { // audio is faster than video, skip
-                    t = dt;
-                }else if (dt < 0) { // audio is slower than video
-                    t = 0;
-                }
-                NSLog(@"ziq1 渲染视频nextvideoposition=%f, mediaPosition=%f, t=%f", nextFrame.position, tempMediaPosition, t);
-                [NSThread sleepForTimeInterval:t];
-            }else{
-                [NSThread sleepForTimeInterval:0.5];
-            }
-        }
-        mVideoFrameReaderThread = nil;
-    }
-}
-
-
 - (void)render {
-    if(self->vframes.count > 0 && ![self->mDecoder isEndOfFile]){
-        NSLog(@"ziq 渲染视频 vframe size = %lu", (unsigned long)self->vframes.count);
-        ZQPlayerFrameVideoRGB *frame = self->vframes[0];
-        [self->vframes removeObjectAtIndex:0];
-        NSLog(@"ziq1 渲染视频----");
-        [self->openGlView render:frame];
-        
-        ZQPlayerFrameVideoRGB *nextFrame = self->vframes[0];
-        double tempMediaPosition = self->mediaPosition;
-        const double dt = nextFrame.position - tempMediaPosition;
-        
-        NSTimeInterval t = 0;
-         if (dt > 0) { // audio is faster than video, skip
-            t = dt;
-         }else if (dt < 0) { // audio is slower than video
-            t = 0;
-         }
-        NSLog(@"ziq1 渲染视频nextvideoposition=%f, mediaPosition=%f, t=%f", nextFrame.position, tempMediaPosition, t);
-//        NSTimeInterval t = MAX(frame.duration + syncTime, 0);
-        
+    if (!mIsPlaying) return;
+    
+    if (self->vframes.count <= 0) {
         __weak typeof(self)weakSelf = self;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(t * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf render];
         });
+        return;
     }
+    
+    NSLog(@"ziq 渲染视频 vframe size = %lu", (unsigned long)self->vframes.count);
+    ZQPlayerFrameVideoRGB *frame = self->vframes[0];
+    [self->vframes removeObjectAtIndex:0];
+    self->mediaPosition = frame.position;
+    self->mBufferedDuration -= frame.duration;
+    
+    NSLog(@"ziq1 渲染视频---- ");
+    [self->openGlView render:frame];
+    
+    double syncTime = [self syncTime];
+    NSTimeInterval t = MAX(frame.duration + syncTime, 0.01);
+    NSLog(@"ziq1 渲染视频mediaPosition=%f, t=%f", self->mediaPosition, t);
+    
+    __weak typeof(self)weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(t * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf render];
+    });
 }
+
+- (double)syncTime {
+    const double now = [NSDate timeIntervalSinceReferenceDate];
+    
+    if (mediaSyncTime == 0) {
+        mediaSyncTime = now;
+        mediaSyncPosition = mediaPosition;
+        return 0;
+    }
+    
+    double dp = mediaPosition - mediaSyncPosition;
+    double dt = now - mediaSyncTime;
+    double sync = dp - dt;
+    NSLog(@"ziq1 %f = %f - %f, %f = %f - %f, %f", dp,mediaPosition,mediaSyncPosition,dt,now,mediaSyncTime, sync);
+    if (sync > 1 || sync < -1) {
+        sync = 0;
+        mediaSyncTime = 0;
+    }
+    
+    return sync;
+}
+
+
 
 - (void)readAudioFrame:(float *)data frames:(UInt32)frames channels:(UInt32)channels {
     NSLog(@"ziq 渲染音频 aframe size = %lu", (unsigned long)self->aframes.count);
@@ -263,11 +240,20 @@ static BOOL S_IS_PlAYING;
                     long timeout = dispatch_semaphore_wait(self->aFramesLock, DISPATCH_TIME_NOW);
                     if (timeout == 0) {
                         ZQPlayerFrameAudio *frame = self->aframes[0];
-                        self->playingAudioFrameDataPosition = 0;
-                        self->playingAudioFrame = frame;
-                        [self->aframes removeObjectAtIndex:0];
-                        self->mediaPosition = frame.position;
-                        self->mBufferedDuration -= frame.duration;
+                        const double dt = self->mediaPosition - frame.position;
+                        if (dt < -0.1) { // audio is faster than video, silence
+                            memset(data, 0, frames * channels * sizeof(float));
+                            dispatch_semaphore_signal(self->aFramesLock);
+                            break;
+                        } else if (dt > 0.1) { // audio is slower than video, skip
+                            [self->aframes removeObjectAtIndex:0];
+                            dispatch_semaphore_signal(self->aFramesLock);
+                            continue;
+                        } else {
+                            self->playingAudioFrameDataPosition = 0;
+                            self->playingAudioFrame = frame;
+                            [self->aframes removeObjectAtIndex:0];
+                        }
                         dispatch_semaphore_signal(self->aFramesLock);
                     } else return;
                 }
