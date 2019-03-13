@@ -111,6 +111,7 @@
 		1BE9BA76222FC85700B7D3E8 /* OpenGlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA75222FC85700B7D3E8 /* OpenGlView.m */; };
 		1BE9BA79222FC9EB00B7D3E8 /* OpenGlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */; };
 		1BE9BA7C222FCCAE00B7D3E8 /* GlViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9BA7B222FCCAE00B7D3E8 /* GlViewTestViewController.m */; };
+		1BF670F922393F0400D03A7A /* MediaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF670F822393F0400D03A7A /* MediaPlayer.m */; };
 		1BFD5F072182101700C1829D /* SplashDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD5F052182101700C1829D /* SplashDemoViewController.m */; };
 		1BFD5F082182101700C1829D /* SplashDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD5F062182101700C1829D /* SplashDemoViewController.xib */; };
 		91A9CFDC63ED1D10960FD376 /* libPods-ZQPlayerIOSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2B9A9AE51F366F381AAC0C /* libPods-ZQPlayerIOSUITests.a */; };
@@ -415,6 +416,8 @@
 		1BE9BA78222FC9EB00B7D3E8 /* OpenGlUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGlUtils.m; sourceTree = "<group>"; };
 		1BE9BA7A222FCCAE00B7D3E8 /* GlViewTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlViewTestViewController.h; sourceTree = "<group>"; };
 		1BE9BA7B222FCCAE00B7D3E8 /* GlViewTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlViewTestViewController.m; sourceTree = "<group>"; };
+		1BF670F722393F0400D03A7A /* MediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaPlayer.h; sourceTree = "<group>"; };
+		1BF670F822393F0400D03A7A /* MediaPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaPlayer.m; sourceTree = "<group>"; };
 		1BFD5F042182101700C1829D /* SplashDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashDemoViewController.h; sourceTree = "<group>"; };
 		1BFD5F052182101700C1829D /* SplashDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashDemoViewController.m; sourceTree = "<group>"; };
 		1BFD5F062182101700C1829D /* SplashDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashDemoViewController.xib; sourceTree = "<group>"; };
@@ -794,6 +797,8 @@
 				1BA9B1832233C0E000E3B448 /* AudioUnitManager.m */,
 				1B397D312235246E004A6918 /* Decoder.h */,
 				1B397D322235246E004A6918 /* Decoder.m */,
+				1BF670F722393F0400D03A7A /* MediaPlayer.h */,
+				1BF670F822393F0400D03A7A /* MediaPlayer.m */,
 			);
 			path = media;
 			sourceTree = "<group>";
@@ -1296,6 +1301,7 @@
 				1B95B47721E2474B00F8359D /* AmusementViewController.m in Sources */,
 				1B95B47C21E2475F00F8359D /* SubscribeViewController.m in Sources */,
 				1B24C4DF21C7F34D00DF541C /* LocationViewController.m in Sources */,
+				1BF670F922393F0400D03A7A /* MediaPlayer.m in Sources */,
 				1BE9BA76222FC85700B7D3E8 /* OpenGlView.m in Sources */,
 				1B22AF2821EB120100557E54 /* UiTools.m in Sources */,
 				1B20F6D021E640CC004756FD /* HorizontalTableViewController.m in Sources */,

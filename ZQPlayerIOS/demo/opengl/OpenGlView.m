@@ -33,6 +33,17 @@
 
 @implementation OpenGlView
 
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        if (![self initVars]) {
+            self = nil;
+            return nil;
+        }
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
