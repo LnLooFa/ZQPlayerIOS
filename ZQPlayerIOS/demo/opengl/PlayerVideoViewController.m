@@ -39,11 +39,6 @@
     [self->mediaPlayer pause];
 }
 
-- (void)dealloc
-{
-    NSLog(@"ziq player dealloc");
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

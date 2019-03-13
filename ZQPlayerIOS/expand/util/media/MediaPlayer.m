@@ -36,6 +36,10 @@
 @end
 @implementation MediaPlayer
 
+- (void)dealloc
+{
+    NSLog(@"MediaPlayer dealloc");
+}
 
 - (id)init {
     self = [super init];
@@ -81,6 +85,7 @@
 
 - (void)pause {
     self.mIsPlaying = FALSE;
+    [self.audioUnitManager pause];
 }
 
 - (void)open:(NSString *)url {
