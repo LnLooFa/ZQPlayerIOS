@@ -8,7 +8,10 @@
 
 #import "GlViewTestViewController.h"
 #import "OpenGlView.h"
-@interface GlViewTestViewController ()
+@interface GlViewTestViewController (){
+     OpenGlView* v;
+//    ZQPlayerFrameVideo* frame;
+}
 
 @end
 
@@ -22,23 +25,50 @@
 }
 
 - (void)viewDidLayoutSubviews{
-    OpenGlView* v = [[OpenGlView alloc] initWithFrame:CGRectMake(100,100,200,200)];
+    
+    v = [[OpenGlView alloc] initWithFrame:CGRectMake(100,100,200,200)];
     [self.view addSubview:v];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"scenery" ofType:@"jpg"];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    NSLog(@"image.size.width = %f, image.size.height = %f", image.size.width, image.size.height);
+//    __weak typeof(self)weakSelf = self;
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        __strong typeof(weakSelf)strongSelf = weakSelf;
+//        if (!strongSelf) {
+//            return;
+//        }
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"scenery" ofType:@"jpg"];
+//        UIImage *image = [UIImage imageWithContentsOfFile:path];
+//        NSLog(@"image.size.width = %f, image.size.height = %f", image.size.width, image.size.height);
+//
+//        GLubyte* imageData = malloc(image.size.width * image.size.height * 4);
+//        CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRGB(), kCGImageAlphaPremultipliedLast);
+//        CGContextDrawImage(imageContext, CGRectMake(0.0, 0.0, image.size.width, image.size.height), image.CGImage);
+//        CGContextRelease(imageContext);
+//
+//        ZQPlayerFrameVideo* frame = [[ZQPlayerFrameVideo alloc] init];
+//        frame.width = image.size.width;
+//        frame.height = image.size.height;
+//        frame.data = [NSData dataWithBytes:imageData length:image.size.width * image.size.height * 4];
+//        frame.format = GL_RGBA;
+//        [strongSelf->v render:frame];
+//    });
     
-    GLubyte* imageData = malloc(image.size.width * image.size.height * 4);
-    CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRGB(), kCGImageAlphaPremultipliedLast);
-    CGContextDrawImage(imageContext, CGRectMake(0.0, 0.0, image.size.width, image.size.height), image.CGImage);
-    CGContextRelease(imageContext);
     
-    ZQPlayerFrameVideo* frame = [[ZQPlayerFrameVideo alloc] init];
-    frame.width = image.size.width;
-    frame.height = image.size.height;
-    frame.data = [NSData dataWithBytes:imageData length:image.size.width * image.size.height * 4];
-    frame.format = GL_RGBA;
-    [v render:frame];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"scenery" ofType:@"jpg"];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        NSLog(@"image.size.width = %f, image.size.height = %f", image.size.width, image.size.height);
+
+        GLubyte* imageData = malloc(image.size.width * image.size.height * 4);
+        CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRGB(), kCGImageAlphaPremultipliedLast);
+        CGContextDrawImage(imageContext, CGRectMake(0.0, 0.0, image.size.width, image.size.height), image.CGImage);
+        CGContextRelease(imageContext);
+
+        ZQPlayerFrameVideo* frame = [[ZQPlayerFrameVideo alloc] init];
+        frame.width = image.size.width;
+        frame.height = image.size.height;
+        frame.data = [NSData dataWithBytes:imageData length:image.size.width * image.size.height * 4];
+        frame.format = GL_RGBA;
+        [self->v render:frame];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
