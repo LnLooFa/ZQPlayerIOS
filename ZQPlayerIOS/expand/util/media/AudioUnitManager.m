@@ -195,7 +195,6 @@ static OSStatus audioUnitRenderCallback(void *inRefCon,
 
 //音频输入回调，填充数据
 - (OSStatus)render:(AudioBufferList *)ioData count:(UInt32)inNumberFrames{
-    NSLog(@"AudioUnit render 回调");
     UInt32 num = ioData->mNumberBuffers;
     for (UInt32 i = 0; i < num; ++i) {
         AudioBuffer buf = ioData->mBuffers[i];

@@ -274,7 +274,9 @@ static const CGFloat MJDuration = 2.0;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    VideoListItemModel* item = self.videoList[indexPath.row];
     VideoPlayViewController* playController = [[VideoPlayViewController alloc] init];
+    playController.roomId =item.id;
     [self.navigationController pushViewController:playController animated:true];
 }
 

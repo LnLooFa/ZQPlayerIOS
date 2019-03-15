@@ -33,6 +33,9 @@
 @property (nonatomic) double mediaPosition;
 @property (nonatomic) double mediaSyncTime;
 @property (nonatomic) double mediaSyncPosition;
+
+@property (nonatomic) bool isShowLog;
+
 @end
 @implementation MediaPlayer
 
@@ -57,6 +60,7 @@
 }
 
 - (void)initVars {
+    self.isShowLog = false;
     self.mIsPlaying = FALSE;
     self.mMinBufferDuration = 2;
     self.mMaxBufferDuration = 5;
@@ -148,7 +152,10 @@
                         [self.aframes addObject:f];
                     }
                 }
-                NSLog(@"ziq 读取 frame = %lu, aframes = %lu", (unsigned long)fs.count, self.aframes.count);
+                if(self.isShowLog){
+                    NSLog(@"ziq 读取 frame = %lu, aframes = %lu", (unsigned long)fs.count, self.aframes.count);
+                }
+                
             }else{
                 //空运转会耗费cpu
                 [NSThread sleepForTimeInterval:1.5];
@@ -159,7 +166,9 @@
 }
 
 - (void)readAudioFrame:(float *)data frames:(UInt32)frames channels:(UInt32)channels {
-    NSLog(@"ziq 渲染音频 aframe size = %lu", (unsigned long)self.aframes.count);
+    if(self.isShowLog){
+        NSLog(@"ziq 渲染音频 aframe size = %lu", (unsigned long)self.aframes.count);
+    }
     if (!self.mIsPlaying) return;
     while(frames > 0) {
         @autoreleasepool {
@@ -228,19 +237,24 @@
         });
         return;
     }
-    
-    NSLog(@"ziq 渲染视频 vframe size = %lu", (unsigned long)self.vframes.count);
+    if(self.isShowLog){
+        NSLog(@"ziq 渲染视频 vframe size = %lu", (unsigned long)self.vframes.count);
+    }
     ZQPlayerFrameVideoRGB *frame = self.vframes[0];
     [self.vframes removeObjectAtIndex:0];
     self.mediaPosition = frame.position;
     self.mBufferedDuration -= frame.duration;
     
-    NSLog(@"ziq1 渲染视频---- ");
+    if(self.isShowLog){
+        NSLog(@"ziq1 渲染视频---- ");
+    }
     [self.openGlView render:frame];
     
     double syncTime = [self syncTime];
     NSTimeInterval t = MAX(frame.duration + syncTime, 0.01);
-    NSLog(@"ziq1 渲染视频mediaPosition=%f, t=%f", self.mediaPosition, t);
+    if(self.isShowLog){
+        NSLog(@"ziq1 渲染视频mediaPosition=%f, t=%f", self.mediaPosition, t);
+    }
     
     __weak typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(t * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -260,7 +274,10 @@
     double dp = self.mediaPosition - self.mediaSyncPosition;
     double dt = now - self.mediaSyncTime;
     double sync = dp - dt;
-    NSLog(@"ziq1 %f = %f - %f, %f = %f - %f, %f", dp,self.mediaPosition,self.mediaSyncPosition,dt,now,self.mediaSyncTime, sync);
+    if(self.isShowLog){
+        NSLog(@"ziq1 %f = %f - %f, %f = %f - %f, %f", dp,self.mediaPosition,self.mediaSyncPosition,dt,now,self.mediaSyncTime, sync);
+    }
+    
     if (sync > 1 || sync < -1) {
         sync = 0;
         self.mediaSyncTime = 0;

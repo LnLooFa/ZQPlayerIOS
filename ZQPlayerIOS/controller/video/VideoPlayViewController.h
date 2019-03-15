@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoPlayViewController : UIViewController
-
+@property (nonatomic, copy) NSString* roomId;
 @end
