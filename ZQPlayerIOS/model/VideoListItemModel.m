@@ -9,5 +9,4 @@
 #import "VideoListItemModel.h"
 
 @implementation VideoListItemModel
-@synthesize id = vid;
 @end

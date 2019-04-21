@@ -53,30 +53,29 @@ static const CGFloat MJDuration = 2.0;
     
     // 下拉刷新
     self.collectionView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        self.pageNumber = 1;
-        [self loadData:self.pageNumber];
+        [self loadData:self.pageNumber isRefresh:true];
     }];
     // 上拉刷新
     self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        self.pageNumber++;
-        [self loadData:self.pageNumber];
+        [self loadData:self.pageNumber isRefresh:false];
     }];
     [self.collectionView.mj_header beginRefreshing];
 
 }
 
--(void)loadData:(NSInteger)page{
-    __weak __typeof(self) weakSelf = self;
-    NSString *pageNumberString = [NSString stringWithFormat:@"%ld",page];
-    NSString *urlStr = @"http://193.112.65.251:8080/live/list";
+-(void)loadData:(NSInteger)page isRefresh:(Boolean)isRefresh{
+    
+    if(isRefresh){
+        self.pageNumber = 1;
+    }
+    NSString *pageNumberString = [NSString stringWithFormat:@"%ld",page*20];
     NSDictionary* parmeters = @{
-                                @"pageno" : pageNumberString,
-                                @"pagenum" : @"20",
-                                @"cate" : @"lol",
-                                @"room" : @"1",
-                                @"version" : @"3.3.1.5978"
+                                @"offset" : pageNumberString,
+                                @"limit" : @"20",
+                                @"live_type" : @"",
+                                @"game_type" : @"ow"
                                 };
-    [[NetworkingManager shareManager] POST:urlStr parameters:parmeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[NetworkingManager shareManager] POST:kLiveListUrl parameters:parmeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dict = responseObject;
         @try {
             int code = [[dict objectForKey:@"code"] intValue];
@@ -87,6 +86,7 @@ static const CGFloat MJDuration = 2.0;
                     if(page == 1){
                         [self.videoList removeAllObjects];
                     }
+                    self.pageNumber++;
                     [self.videoList addObjectsFromArray:videolist];
                 }
                 [self.collectionView reloadData];
@@ -268,15 +268,16 @@ static const CGFloat MJDuration = 2.0;
     pic.clipsToBounds = YES;
     UILabel *nameLab = (UILabel *)[cell viewWithTag:2];
     VideoListItemModel* item = self.videoList[indexPath.row];
-    
-    [pic sd_setImageWithURL:item.imageUrl];
-    nameLab.text = item.name;
+    [pic sd_setImageWithURL:[NSURL URLWithString:item.live_img]];
+    nameLab.text = item.live_title;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     VideoListItemModel* item = self.videoList[indexPath.row];
     VideoPlayViewController* playController = [[VideoPlayViewController alloc] init];
-    playController.roomId =item.id;
+    playController.live_id =item.live_id;
+    playController.live_type =item.live_type;
+    playController.game_type =item.game_type;
     [self.navigationController pushViewController:playController animated:true];
 }
 

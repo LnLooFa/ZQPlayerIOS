@@ -40,7 +40,8 @@
                                    @"icon_discover_selected",
                                    @"icon_mine_selected"];
     HomeViewController *homeVC = [[HomeViewController alloc] init];
-    homeVC.titleColorSelected = [UIColor colorWithHexString:@"#ffa200" alpha:1];//生命周期原因 要在这里设置
+    homeVC.titleColorSelected = [UIColor colorWithHexString:@"#ffa200" alpha:1];
+    //生命周期原因 要在这里设置
     
     AmusementViewController *amusementVC = [[AmusementViewController alloc] init];
     SubscribeViewController *subscribeVC = [[SubscribeViewController alloc] init];

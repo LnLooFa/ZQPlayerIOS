@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoPlayViewController : UIViewController
-@property (nonatomic, copy) NSString* roomId;
+@property (nonatomic, copy) NSString* live_id;
+@property (nonatomic, copy) NSString* live_type;
+@property (nonatomic, copy) NSString* game_type;
 @end

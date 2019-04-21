@@ -34,10 +34,7 @@
         make.height.mas_equalTo(kScreenWidth /16 * 9);
     }];
     
-    
-    
-    NSLog(@"_roomId = %@", _roomId);
-    [self loadData:_roomId];
+    [self loadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -49,25 +46,33 @@
     NSLog(@"VideoPlayViewController dealloc");
 }
 
--(void)loadData:(NSString* )roomid{
-    NSString *urlStr = @"http://193.112.65.251:8080/live/list/item";
+-(void)loadData{
     NSDictionary* parmeters = @{
-                                @"roomid" : roomid,
-                                @"slaveflag" : @1,
-                                @"type" : @"json",
-                                @"__plat" : @"android",
-                                @"__version" : @"3.3.1.5978"
+                                @"live_id" : self.live_id,
+                                @"live_type" : self.live_type,
+                                @"game_type" : self.game_type
                                 };
-    [[NetworkingManager shareManager] POST:urlStr parameters:parmeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[NetworkingManager shareManager] POST:kLiveItemDetailUrl parameters:parmeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *dict = responseObject;
         @try {
             int code = [[dict objectForKey:@"code"] intValue];
             if (code == 1) {
                 NSDictionary *dataDict = [dict objectForKey:@"data"];
-                self->url = (NSString *)[dataDict valueForKey:@"videoUrl"];
-                NSLog(@"请求成功 %@", self->url);
-                [self->mediaPlayer open:self->url];
+                if ([[dataDict allKeys] containsObject:@"stream_list"]) {
+                    // contains key
+                    NSMutableArray * streamList = [dataDict objectForKey:@"stream_list"];
+                    if(streamList.count > 0){
+                        NSDictionary * streamItem = streamList[0];
+                        self->url = (NSString *)[streamItem valueForKey:@"url"];
+                        NSLog(@"请求成功 %@", self->url);
+                        [self->mediaPlayer open:self->url];
+                    }else{
+                        NSLog(@"没有直播源");
+                    }
+                }else{
+                    NSLog(@"没有直播源");
+                }
             }else {
                 NSString *message = [dict objectForKey:@"msg"];
                 NSLog(@"请求失败 %@",message);

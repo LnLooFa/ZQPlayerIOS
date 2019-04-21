@@ -17,6 +17,7 @@
 #import "UtilsMacro.h"
 #import "UiTools.h"
 #import "UIColor+Util.h"
+#import "Constant.h"
 
 #pragma mark - 第三方库
 #import <Toast/UIView+Toast.h>
